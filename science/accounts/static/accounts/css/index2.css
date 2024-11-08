@@ -1,0 +1,220 @@
+.div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #D9D9D9;
+    width: 1920px;
+    height: 2507px;
+}
+.div1 {
+    position: absolute;
+    top: 2232px;
+    left: 0px;
+    border-radius: 5px;
+    background-color: #161515;
+    width: 1920px;
+    height: 275px;
+}
+.div2 {
+    position: absolute;
+    top: 2296px;
+    left: 92px;
+    font-size: 20px;
+    display: inline-block;
+    width: 1657px;
+    height: 151px;
+}
+.frame-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #1e1e1e;
+    width: 1920px;
+    height: 122px;
+}
+.frame-item {
+    position: absolute;
+    top: 27px;
+    left: 37px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    width: 68px;
+    height: 68px;
+}
+.rocket-science {
+    position: absolute;
+    top: 39px;
+    left: 140px;
+    font-size: 32px;
+    font-family: Inter;
+    display: inline-block;
+    width: 254px;
+    height: 44px;
+}
+.div3 {
+    position: absolute;
+    top: 44px;
+    left: 650px;
+    font-family: Inter;
+    display: inline-block;
+    width: 111px;
+    height: 44px;
+}
+.div4 {
+    position: absolute;
+    top: 44px;
+    left: 840px;
+    font-family: Inter;
+    display: inline-block;
+    width: 109px;
+    height: 44px;
+}
+.div5 {
+    position: absolute;
+    top: 44px;
+    left: 1009px;
+    font-family: Inter;
+    display: inline-block;
+    width: 195px;
+    height: 44px;
+}
+.div6 {
+    position: absolute;
+    top: 44px;
+    left: 1265px;
+    font-family: Inter;
+    display: inline-block;
+    width: 108px;
+    height: 44px;
+}
+.frame-inner {
+    position: absolute;
+    top: 200px; /* отрегулируйте значение, чтобы установить желаемое расположение */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1700px; /* ширина блока */
+    height: 2000px; /* высота блока */
+    border-radius: 50px; /* радиус закругления */
+    background-color: #F7F7F7; /* цвет фона */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* тень для выделения */
+}
+
+.div7 {
+    position: absolute;
+    top: 1376px;
+    left: 699px;
+    font-size: 20px;
+    text-decoration: underline;
+    color: #43a3fd;
+    display: inline-block;
+    width: 322px;
+    height: 46px;
+}
+.div8 {
+    position: absolute;
+    top: 1035px;
+    left: 699px;
+    color:#2D2D2D;
+    display: inline-block;
+    width: 327px;
+    height: 29px;
+}
+.div9 {
+    position: absolute;
+    top: 880px;
+    left: 699px;
+    color:#2D2D2D;
+    display: inline-block;
+    width: 415px;
+    height: 31px;
+}
+.div10 {
+    position: absolute;
+    top: 1227.76px;
+    left: 789.92px;
+    border-radius: 30px;
+    background-color: #15610b;
+    width: 341.1px;
+    height: 75.6px;
+    transform:  rotate(-0.1deg);
+    transform-origin: 0 0;
+}
+.div11 {
+    position: absolute;
+    top: 940px;
+    left: 699px;
+    background-color: #d9d9d9;
+    width: 517px;
+    height: 58px;
+}
+.div12 {
+    position: absolute;
+    top: 1097px;
+    left: 699px;
+    background-color: #d9d9d9;
+    width: 517px;
+    height: 57px;
+}
+.div13 {
+    position: absolute;
+    top: 556px;
+    left: 825px;
+    font-size: 96px;
+    color:#2D2D2D;
+    display: inline-block;
+    width: 349px;
+    height: 195px;
+}
+.div14 {
+    position: absolute;
+    top: 1248px;
+    left: 912px;
+    font-size: 20px;
+    display: inline-block;
+    width: 237px;
+    height: 40px;
+}
+.icon-ionicons-logos-log {
+    position: absolute;
+    top: 751px;
+    left: 787px;
+    width: 97.2px;
+    height: 93px;
+    color:#2D2D2D;
+    overflow: hidden;
+}
+.icon-ionicons-logos-log1 {
+    position: absolute;
+    height: 4.65%;
+    width: 4.84%;
+    top: 37.55%;
+    right: 47.6%;
+    bottom: 57.8%;
+    left: 47.55%;
+    max-width: 100%;
+    
+    overflow: hidden;
+    max-height: 100%;
+}
+.icon-ionicons-logos-log2 {
+    position: absolute;
+    height: 4.65%;
+    width: 4.84%;
+    top: 37.55%;
+    right: 41.25%;
+    bottom: 57.8%;
+    left: 53.91%;
+    max-width: 100%;
+   
+    overflow: hidden;
+    max-height: 100%;
+}
+.parent {
+    width: 100%;
+    position: relative;
+    height: 2000px;
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+    font-family: Kodchasan;
+}

@@ -34,18 +34,18 @@ def register(request):
         username = request.POST['username']
         if password == c_password:
             if User.objects.filter(username = username).exists():
-                messages.info(request,'Username already taken')
+                messages.info(request,'Имя пользователя уже занято')
                 return redirect('register')
             elif User.objects.filter(email = email).exists():
-                messages.info(request,'Email already taken')
+                messages.info(request,'Электронное письмо уже отправлено')
                 return redirect('register')
             else:
                 user =  User.objects.create_user(username = username, password = c_password, email=email, first_name = first_name, last_name= last_name)
                 user.save()
-                messages.info(request,'User created Successfully')
+                messages.info(request,'Пользователь успешно создан')
                 return redirect('login')
         else:
-            messages.info(request,'Confirm Password should be same as password')
+            messages.info(request,'Пароли не совпадают!')
             return redirect('register')
     else:
         return render(request,'accounts/register.html')

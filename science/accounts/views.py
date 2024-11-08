@@ -3,6 +3,26 @@ from django.contrib import messages
 from django.contrib.auth.models import User, auth
 
 
+
+def login(request):
+    if request.method == "POST":
+        password = request.POST['password']
+        username = request.POST['username']
+
+        user = auth.authenticate(username=username, password = password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            messages.info(request,'Invalid credentials')
+            return redirect('login')
+
+    else:
+        return render(request, 'accounts/login.html')
+
+
+
+
 def register(request):
 
     if request.method == 'POST':

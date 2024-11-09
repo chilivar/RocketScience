@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+    <form action="login" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="submit">
+    </form>
+    <div>
+            <h3>
+                {% for message in messages %}
+                {{message}}
+                {% endfor %}
+            </h3>
+        </div>
+    
+</body>
+</html> -->
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="{% static 'accounts/css/index2.css' %} "/>
+	<link rel="stylesheet"  href="{% static 'accounts/css/global.css' %} " />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+  	
+  	
+  	
+</head>
+<body>
+  	
+  	<div class="parent">
+    		<div class="div">
+    		</div>
+    		<div class="div1">
+    		</div>
+    		<div class="div2">Какой-то текст</div>
+    		<div class="frame-child">
+    		</div>
+    		<div class="frame-item">
+    		</div>
+    		<div class="rocket-science">Rocket Science</div>
+    		<div class="div3">Главная</div>
+    		<div class="div4">О нас</div>
+    		<div class="div5">Обратная связь</div>
+    		<div class="div6">Профиль</div>
+    		<div class="frame-inner"></div>
+
+    		
+    		<div class="div7">Забыли пароль?</div>
+    		<div class="div8">Пароль</div>
+    		<div class="div9">Номер телефона или почка</div>
+    		<div class="div10">
+    		</div>
+    		<div class="div11">
+    		</div>
+    		<div class="div12">
+    		</div>
+    		<div class="div13">Вход</div>
+    		<div class="div14">Вход</div>
+    		<img class="icon-ionicons-logos-log" alt="" src="{% static 'accounts/img/logo-github2.svg' %}">
+    		
+    		<img class="icon-ionicons-logos-log1" alt="" src="{% static 'accounts/img/logo-chrome2.svg' %}">
+    		
+    		<img class="icon-ionicons-logos-log2" alt="" src="{% static 'accounts/img/logo-google2.svg' %}">
+    		
+  	</div>
+  	
+  	
+  	
+  	
+</body>
+</html>

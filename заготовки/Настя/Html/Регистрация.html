@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
+    <title>Регистрация</title>
+</head>
+<body>
+    <div class="parent">
+        <header class="frame-child">
+            <div class="frame-item"></div>
+            <div class="rocket-science">Rocket Science</div>
+            <nav>
+                <a class="nav-item" href="#">Главная</a>
+                <a class="nav-item" href="#">О нас</a>
+                <a class="nav-item" href="#">Обратная связь</a>
+                <a class="nav-item" href="#">Профиль</a>
+            </nav>
+        </header>
+
+        <div class="registration-form">
+            <h2>Регистрация</h2>
+            <form action="/submit_registration" method="post">
+                <div class="form-row">
+                    <label for="first-name">Имя</label>
+                    <input type="text" id="first-name" name="first_name" required>
+                    <label for="last-name">Фамилия</label>
+                    <input type="text" id="last-name" name="last_name" required>
+                </div>
+                <label for="email">Почта</label>
+                <input type="email" id="email" name="email" required>
+                <label for="username">Псевдоним</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password">Повторите пароль</label>
+                <input type="password" id="confirm-password" name="confirm_password" required>
+                <button type="submit" class="register-button">Регистрация</button>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="logo-circle"></div>
+                    <p class="footer-title">Rocket Science</p>
+                </div>
+                <p class="footer-description">Размещаем статьи и другие научные ресурсы</p>
+            </div>
+            <div class="footer-section">
+                <p>Контакты: +7 779 523 18 44<br>+7 779 523 18 43</p>
+                <p>Почта: support@gmail.com<br>support1@gmail.com</p>
+            </div>
+            <div class="footer-rights">© 2024 RocketScience.com</div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -20,12 +20,13 @@
         <div class="rocket-science">Rocket Science</div>
         <a href="{% url 'index' %}"> <div class="div">Главная</div></a>
         <a href="{% url 'about' %}"><div class="div1">О нас</div></a>
-        <div class="div2">Обратная связь</div>
+        <a href="{% url 'feedback' %}"><div class="div2">Обратная связь</div></a>
         <div class="div3">Профиль</div>
         <a href="{% url 'login' %}"><div class="div4">Вход</div></a>
         <a href="{% url 'register' %}"><div class="div5">Регистрация</div></a>
         {% block content %}
         {% endblock %}
+        <img class="frame-child2" alt="" src="{% static 'main/img/Rectangle 17.svg' %}">
         <div class="rocketsciencecom">© 2024 RocketScience.com</div>
         <div class="supportgmailcom-support1gma">
             <p class="supportgmailcom">Почта: support@gmail.com</p>
@@ -46,6 +47,7 @@
         <img class="vector-icon2" alt="" src="{% static 'main/img/Vector2.svg' %}">
 
         <div class="div8">Размещаем статьи и другие научные ресурсы</div>
+
     </div>
 </body>
 </html>

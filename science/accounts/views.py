@@ -4,6 +4,9 @@ from django.contrib.auth.models import User, auth
 
 
 
+
+
+
 def login(request):
     if request.method == "POST":
         password = request.POST['password']
@@ -12,14 +15,13 @@ def login(request):
         user = auth.authenticate(username=username, password = password)
         if user is not None:
             auth.login(request, user)
-            return redirect('/')
+            return redirect('accounts/login.html')
         else:
             messages.info(request,'Invalid credentials')
             return redirect('login')
 
     else:
         return render(request, 'accounts/login.html')
-
 
 
 

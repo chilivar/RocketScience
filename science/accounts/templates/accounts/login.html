@@ -28,7 +28,7 @@
         
         <main class="frame-inner">
             <h1 class="BigLogin">Вход</h1>
-            <form action="/login" method="post">
+            <form action="login" method="post">
                 {% csrf_token %}
                 <input type="text" class="TextboxNumEm" name="username" placeholder="Введите номер телефона или почту" required>
                 <input type="password" class="Textboxpasswod" name="password" placeholder="Введите пароль" required>

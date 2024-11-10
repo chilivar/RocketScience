@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'main/css/index.css' %}" />{% endblock %}
+
+{% block content %}
+<img class="frame-child1" alt="" src="{% static 'main/img/Rectangle 16.svg' %}">
+<div class="div6">Напишите что-нибудь для поиска</div>
+<img class="frame-child2" alt="" src="{% static 'main/img/Rectangle 17.svg' %}">
+<div class="icon-magnifying-glass">
+    <img class="vector-icon4" alt="" src="{% static 'main/img/glass.svg' %}">
+</div>
+{% endblock %}

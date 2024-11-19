@@ -1,0 +1,266 @@
+.page {
+    width: 100%;
+    position: relative;
+    background-color: #2d2d2d;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 2500px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+    font-family: Inter;
+}
+
+/* Header Section */
+.header-icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #1e1e1e;
+    width: 1920px;
+    height: 122px;
+}
+.logo {
+    position: absolute;
+    top: 27px;
+    left: 37px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    width: 68px;
+    height: 68px;
+}
+.sign-in-icon {
+    position: absolute;
+    top: 34px;
+    left: 1614px;
+    border-radius: 20px;
+    width: 95px;
+    height: 54px;
+}
+.log-in-icon {
+    position: absolute;
+    top: 34px;
+    left: 1732px;
+    border-radius: 20px;
+    width: 180px;
+    height: 54px;
+}
+.rocket-science-txt {
+    position: absolute;
+    top: 39px;
+    left: 140px;
+    font-size: 32px;
+    display: inline-block;
+    width: 254px;
+    height: 44px;
+}
+.main-txt {
+    position: absolute;
+    top: 44px;
+    left: 650px;
+    display: inline-block;
+    width: 111px;
+    height: 44px;
+}
+.about-us-txt {
+    position: absolute;
+    top: 44px;
+    left: 840px;
+    display: inline-block;
+    width: 109px;
+    height: 44px;
+}
+.feedback-txt {
+    position: absolute;
+    top: 44px;
+    left: 1009px;
+    display: inline-block;
+    width: 195px;
+    height: 44px;
+}
+.profile-txt {
+    position: absolute;
+    top: 44px;
+    left: 1265px;
+    display: inline-block;
+    width: 108px;
+    height: 44px;
+}
+.sign-in-txt {
+    position: absolute;
+    top: 44px;
+    left: 1627px;
+    text-align: center;
+    display: inline-block;
+    width: 70px;
+    height: 44px;
+}
+.log-in-txt {
+    position: absolute;
+    top: 44px;
+    left: 1741px;
+    text-align: center;
+    display: inline-block;
+    width: 161px;
+    height: 44px;
+}
+
+
+/* Main Section */
+.about-icon {
+    position: absolute;
+    top: 165px;
+    left: 97px;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    width: 360px;
+    height: 130px;
+}
+.about-txt {
+    z-index: 10;
+    position: absolute;
+    top: 195px;
+    left: 206px;
+    font-size: 36px;
+    display: inline-block;
+    text-align: center;
+    width: 141px;
+    height: 53px;
+}
+.info-icon {
+    position: absolute;
+    top: 249px;
+    left: 97px;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    width: 1755px;
+    height: 1939px;
+}
+.info-txt {
+    position: absolute;
+    top: 340px;
+    left: 171px;
+    font-size: 32px;
+    display: inline-block;
+    width: 1580px;
+    height: 1676px;
+}
+
+/* Footer Section */
+.footer-icon {
+    position: absolute;
+    top: 2255px;
+    left: -1px;
+    width: 1924px;
+    height: 245px;
+}
+.rocketsciencecom {
+    position: absolute;
+    top: 2425px;
+    left: 1584px;
+    color: #999;
+    display: inline-block;
+    width: 339px;
+    height: 29px;
+}
+.gmail-txt {
+    margin: 0;
+}
+.gmail1-txt {
+    margin: 0;
+    white-space: pre-wrap;
+}
+.supportgmail{
+    position: absolute;
+    top: 2398px;
+    left: 1002px;
+    color: #999;
+    display: inline-block;
+    width: 365px;
+    height: 84px;
+}
+.contacts {
+    position: absolute;
+    top: 2398px;
+    left: 583px;
+    color: #999;
+    display: inline-block;
+    width: 365px;
+    height: 84px;
+}
+.logo-icon {
+    position: absolute;
+    top: 2304px;
+    left: 39px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    width: 68px;
+    height: 68px;
+}
+.rocket-science1-txt {
+    position: absolute;
+    top: 2316px;
+    left: 142px;
+    font-size: 32px;
+    display: inline-block;
+    width: 254px;
+    height: 44px;
+}
+.group-icon {
+    position: absolute;
+    height: 2.63%;
+    width: 3.46%;
+    top: 92.24%;
+    right: 22.75%;
+    bottom: 5.13%;
+    left: 73.79%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.vector-icon {
+    position: absolute;
+    height: 2.64%;
+    width: 4.05%;
+    top: 92.24%;
+    right: 16.46%;
+    bottom: 5.12%;
+    left: 79.49%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.vector-icon1 {
+    position: absolute;
+    height: 2.52%;
+    width: 3.18%;
+    top: 92.36%;
+    right: 11.03%;
+    bottom: 5.12%;
+    left: 85.79%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.vector-icon2 {
+    position: absolute;
+    height: 2.4%;
+    width: 4.36%;
+    top: 92.48%;
+    right: 3.74%;
+    bottom: 5.12%;
+    left: 91.9%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.description-txt {
+    position: absolute;
+    top: 2400px;
+    left: 39px;
+    color: #999;
+    display: inline-block;
+    width: 365px;
+    height: 84px;
+}

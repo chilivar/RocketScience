@@ -1,6 +1,162 @@
-
 body {
     margin: 0;
-    line-height: normal;
+    padding: 0;
+    overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: space-between; /* Распределение элементов с равными промежутками */
+    width: 100%;
+    height: 122px;
+    background-color: #1e1e1e;
+    padding: 0 20px; /* Отступы по бокам */
+    box-sizing: border-box; /* Включаем отступы в размеры элемента */
+}
+
+/* Логотип */
+.logo {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+}
+
+/* Основной текст "Rocket Science" */
+.rocket-science-txt {
+    font-size: 32px;
+    color: #fff;
+    margin-left: 20px;
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    gap: 20px; /* Расстояние между элементами */
+}
+
+.nav div {
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Элементы навигации при наведении */
+.nav div:hover {
+    color: #cf2b2b; /*  цвет */
+}
+
+/* Общий стиль кнопок */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2d2d2d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+
+/* Текст в кнопках */
+button span {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Контейнер для кнопок */
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap; /* Разрешаем перенос строк */
+        height: auto;
+        padding: 10px;
+    }
+
+    .rocket-science-txt {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+
+.logo {
+    position: absolute;
+    top: 27px;
+    left: 37px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    width: 68px;
+    height: 68px;
+}
+
+.rocket-science-txt {
+    position: absolute;
+    top: 39px;
+    left: 140px;
+    font-size: 32px;
+    display: inline-block;
+    width: 254px;
+    height: 44px;
+}
+.main-txt {
+    position: absolute;
+    top: 44px;
+    left: 650px;
+    display: inline-block;
+    width: 111px;
+    height: 44px;
+}
+.about-us-txt {
+    position: absolute;
+    top: 44px;
+    left: 840px;
+    display: inline-block;
+    width: 109px;
+    height: 44px;
+}
+.feedback-txt {
+    position: absolute;
+    top: 44px;
+    left: 1009px;
+    display: inline-block;
+    width: 195px;
+    height: 44px;
+}
+.profile-txt {
+    position: absolute;
+    top: 44px;
+    left: 1265px;
+    display: inline-block;
+    width: 108px;
+    height: 44px;
 }
 

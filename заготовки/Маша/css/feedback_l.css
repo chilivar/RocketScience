@@ -1,0 +1,562 @@
+.page {
+    width: 100%;
+    position: relative;
+    background-color: #d9d9d9;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 2500px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+    font-family: Inter;
+}
+
+/* Header Section */
+.header-icon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #1e1e1e;
+    width: 1920px;
+    height: 122px;
+}
+.logo {
+    position: absolute;
+    top: 27px;
+    left: 37px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    width: 68px;
+    height: 68px;
+}
+.sign-in-icon {
+    position: absolute;
+    top: 34px;
+    left: 1614px;
+    border-radius: 20px;
+    width: 95px;
+    height: 54px;
+}
+.log-in-icon {
+    position: absolute;
+    top: 34px;
+    left: 1732px;
+    border-radius: 20px;
+    width: 180px;
+    height: 54px;
+}
+.rocket-science-txt {
+    position: absolute;
+    top: 39px;
+    left: 140px;
+    font-size: 32px;
+    display: inline-block;
+    width: 254px;
+    height: 44px;
+}
+.main-txt {
+    position: absolute;
+    top: 44px;
+    left: 650px;
+    display: inline-block;
+    width: 111px;
+    height: 44px;
+}
+.about-us-txt {
+    position: absolute;
+    top: 44px;
+    left: 840px;
+    display: inline-block;
+    width: 109px;
+    height: 44px;
+}
+.feedback-txt {
+    position: absolute;
+    top: 44px;
+    left: 1009px;
+    display: inline-block;
+    width: 195px;
+    height: 44px;
+}
+.profile-txt {
+    position: absolute;
+    top: 44px;
+    left: 1265px;
+    display: inline-block;
+    width: 108px;
+    height: 44px;
+}
+.sign-in-txt {
+    position: absolute;
+    top: 44px;
+    left: 1627px;
+    text-align: center;
+    display: inline-block;
+    width: 70px;
+    height: 44px;
+}
+.log-in-txt {
+    position: absolute;
+    top: 44px;
+    left: 1741px;
+    text-align: center;
+    display: inline-block;
+    width: 161px;
+    height: 44px;
+}
+
+
+/* Main Section */
+.feedback-icon {
+    position: absolute;
+    top: 161px;
+    left: 90px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    width: 657px;
+    height: 176px;
+}
+.feedback1-txt {
+    position: absolute;
+    top: 212px;
+    left: 146px;
+    font-size: 36px;
+    display: inline-block;
+    color: #2d2d2d;
+    text-align: center;
+    width: 523px;
+    height: 97px;
+}
+.feedback-main-icon {
+    position: absolute;
+    top: 299px;
+    left: 90px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    width: 1772px;
+    height: 1890px;
+}
+
+/* Контейнер1 */
+.msg-theme-container {
+    position: absolute;
+    top: 412px;
+    left: 143px;
+    width: 1666px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("Rectangle fl1.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.msg-theme-input {
+    flex: 1;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #2d2d2d;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+}
+
+/* Стиль текста-заполнителя */
+.msg-theme-input::placeholder {
+    color: #4a4a4a;
+    font-size: 20px;
+}
+
+/* Контейнер2 */
+.msg-title-container {
+    position: absolute;
+    top: 563px;
+    left: 143px;
+    width: 1666px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("Rectangle fl2.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.msg-title-input {
+    flex: 1;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #2d2d2d;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+}
+
+/* Стиль текста-заполнителя */
+.msg-title-input::placeholder {
+    color: #4a4a4a;
+    font-size: 20px;
+}
+
+/* Контейнер3 */
+.msg-container {
+    position: absolute;
+    top: 783px;
+    left: 143px;
+    width: 1666px;
+    height: 993px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 20px;
+    background-image: url("Rectangle fl3.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.msg-input {
+    position: relative;
+    top: 50px;  
+    width: calc(100% - 40px); /* Учёт отступов */
+    height: 890px;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #2d2d2d;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+    resize: none; /* Убираем возможность изменения размера */
+    padding: 10px 40px 10px 40px; /* Отступы внутри поля */
+    line-height: 1.5; /* Интервал между строками */
+}
+
+/* Стиль текста-заполнителя */
+.msg-input::placeholder {
+    color: #4a4a4a;
+    font-size: 20px;
+}
+
+/* Контейнер4 */
+.mail-container {
+    position: absolute;
+    top: 1851px;
+    left: 143px;
+    width: 1666px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("Rectangle fl4.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.mail-input {
+    flex: 1;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #2d2d2d;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+}
+
+/* Стиль текста-заполнителя */
+.mail-input::placeholder {
+    color: #4a4a4a;
+    font-size: 20px;
+}
+
+/* Контейнер для кнопок */
+.button-container {
+    display: flex;
+    gap: 20px; /* Расстояние между кнопками */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/* Общий стиль кнопок */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Расстояние между иконкой и текстом */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0; /* Цвет фона кнопки */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Иконки в кнопках */
+button img {
+    width: 24px; /* Размер иконки */
+    height: 24px;
+}
+
+/* Текст в кнопках */
+button span {
+    font-size: 24px;
+    color: #2d2d2d; /* Цвет текста */
+    font-weight: bold;
+}
+
+
+.msg-theme-icon {
+    position: absolute;
+    top: 412px;
+    left: 143px;
+    border-radius: 20px;
+    width: 1666px;
+    height: 111px;
+}
+.msg-theme-txt {
+    z-index: 10;
+    position: absolute;
+    top: 426px;
+    left: 208px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 1548px;
+    height: 92px;
+}
+.msg-icon {
+    position: absolute;
+    top: 783px;
+    left: 143px;
+    border-radius: 20px;
+    width: 1666px;
+    height: 993px;
+}
+.msg-txt {
+    position: absolute;
+    top: 821px;
+    left: 208px;
+    color: #2d2d2d;
+    display: inline-block;
+    width: 1548px;
+    height: 914px;
+}
+.msg-title-icon {
+    position: absolute;
+    top: 563px;
+    left: 143px;
+    border-radius: 20px;
+    width: 1666px;
+    height: 111px;
+}
+
+.mail-txt {
+    position: absolute;
+    top: 1861px;
+    left: 208px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 1186px;
+    height: 96px;
+}
+.mail-icon {
+    position: absolute;
+    top: 1851px;
+    left: 143px;
+    border-radius: 20px;
+    width: 1666px;
+    height: 111px;
+}
+.msg-title-txt {
+    z-index: 10;
+    position: absolute;
+    top: 572px;
+    left: 208px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 1548px;
+    height: 93px;
+}
+.send-icon {
+    position: absolute;
+    top: 2013px;
+    left: 143px;
+    border-radius: 20px;
+    width: 458px;
+    height: 110px;
+}
+.clear-icon {
+    position: absolute;
+    top: 2013px;
+    left: 649px;
+    border-radius: 20px;
+    width: 458px;
+    height: 110px;
+}
+.send-txt {
+    position: absolute;
+    top: 2023px;
+    left: 228px;
+    color: #2d2d2d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 281px;
+    height: 91px;
+}
+.clear-txt {
+    position: absolute;
+    top: 2023px;
+    left: 735px;
+    color: #2d2d2d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 91px;
+}
+
+
+/* Footer Section */
+.footer-icon {
+    position: absolute;
+    top: 2255px;
+    left: -1px;
+    width: 1924px;
+    height: 245px;
+}
+.rocketsciencecom {
+    position: absolute;
+    top: 2425px;
+    left: 1584px;
+    color: #999;
+    display: inline-block;
+    width: 339px;
+    height: 29px;
+}
+.gmail-txt {
+    margin: 0;
+}
+.gmail1-txt {
+    margin: 0;
+    white-space: pre-wrap;
+}
+.supportgmail{
+    position: absolute;
+    top: 2398px;
+    left: 1002px;
+    color: #999;
+    display: inline-block;
+    width: 365px;
+    height: 84px;
+}
+.contacts {
+    position: absolute;
+    top: 2398px;
+    left: 583px;
+    color: #999;
+    display: inline-block;
+    width: 365px;
+    height: 84px;
+}
+.logo-icon {
+    position: absolute;
+    top: 2304px;
+    left: 39px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    width: 68px;
+    height: 68px;
+}
+.rocket-science1-txt {
+    position: absolute;
+    top: 2316px;
+    left: 142px;
+    font-size: 32px;
+    display: inline-block;
+    width: 254px;
+    height: 44px;
+}
+.group-icon {
+    position: absolute;
+    height: 2.63%;
+    width: 3.46%;
+    top: 92.24%;
+    right: 22.75%;
+    bottom: 5.13%;
+    left: 73.79%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.vector-icon {
+    position: absolute;
+    height: 2.64%;
+    width: 4.05%;
+    top: 92.24%;
+    right: 16.46%;
+    bottom: 5.12%;
+    left: 79.49%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.vector-icon1 {
+    position: absolute;
+    height: 2.52%;
+    width: 3.18%;
+    top: 92.36%;
+    right: 11.03%;
+    bottom: 5.12%;
+    left: 85.79%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.vector-icon2 {
+    position: absolute;
+    height: 2.4%;
+    width: 4.36%;
+    top: 92.48%;
+    right: 3.74%;
+    bottom: 5.12%;
+    left: 91.9%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.description-txt {
+    position: absolute;
+    top: 2400px;
+    left: 39px;
+    color: #999;
+    display: inline-block;
+    width: 365px;
+    height: 84px;
+}

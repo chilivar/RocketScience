@@ -4,9 +4,6 @@ from django.contrib.auth.models import User, auth
 
 
 
-
-
-
 def login(request):
     if request.method == "POST":
         password = request.POST['password']
@@ -19,7 +16,6 @@ def login(request):
         else:
             messages.info(request,'Invalid credentials')
             return redirect('login')
-
     else:
         return render(request, 'accounts/login.html')
 
@@ -51,3 +47,10 @@ def register(request):
             return redirect('register')
     else:
         return render(request,'accounts/register.html')
+    
+
+
+
+def profile(request):
+    return render(request, 'accounts/profile.html', {'user': request.user})
+    

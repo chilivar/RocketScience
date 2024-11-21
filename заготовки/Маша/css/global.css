@@ -1,6 +1,27 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    box-sizing: border-box;
+    background-color: #2d2d2d;
+}
+
+.content {
+    flex: 1; /* Контент занимает всё доступное пространство */
+    padding: 20px;
+}
+
+
+body {
     overflow-x: hidden;
 }
 * {
@@ -41,13 +62,17 @@ body {
 /* Навигация */
 .nav {
     display: flex;
-    gap: 20px; /* Расстояние между элементами */
+    justify-content: space-between; /* Равномерно распределить элементы по горизонтали */
+    gap: 300px; /* Расстояние между элементами */
+    flex-grow: 1; /* Навигация займет оставшееся пространство между логотипом и кнопками */
+    align-items: center; /* Вертикальное выравнивание элементов */
 }
 
 .nav div {
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
     cursor: pointer;
+    margin-left: 200px;
 }
 
 /* Элементы навигации при наведении */
@@ -78,7 +103,7 @@ button:hover {
 button span {
     font-size: 24px;
     color: #fff;
-    font-weight: bold;
+
 }
 
 /* Контейнер для кнопок */
@@ -160,3 +185,102 @@ button span {
     height: 44px;
 }
 
+
+
+
+/* Footer Section */
+.footer {
+    width: 100%; /* На всю ширину экрана */
+    background-color: #000; /* Чёрный фон */
+    color: #999; /* Белый текст */
+    padding: 20px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+/* Фон футера */
+.footer-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Растяжение на всю ширину */
+    height: 100%; /* Высота фона */
+    object-fit: cover;
+    z-index: -1; /* Перемещаем фон на задний план */
+}
+
+/* Верхний блок с логотипом и текстом */
+.logo-icon {
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    width: 68px;
+    height: 68px;
+    margin-bottom: 10px;
+}
+
+.description-txt {
+    color: #999;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Контейнер для контактов и почты */
+.contact-support {
+    display: flex;
+    gap: 400px; /* Расстояние между блоками */
+    margin-top: 10px;
+    margin-left: 400px; 
+}
+
+.contacts, .supportgmail {
+    margin: 0;
+    font-size: 20px; /* Размер шрифта */
+    
+}
+
+.contacts p:first-child,
+.supportgmail p:first-child {
+    font-weight: bold; /* Заголовки контактов и почты */
+    margin-bottom: 5px;
+}
+
+/* Блок иконок */
+.icons-container {
+    display: flex;
+    position: absolute;
+    top: 30px; /* Смещение от верхнего края футера */
+    right: 40px; /* Смещение от правого края футера */
+    gap: 20px; /* Расстояние между иконками */
+}
+
+.group-icon,
+.vector-icon,
+.vector-icon1,
+.vector-icon2 {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px; /* Отступ между иконками */
+    object-fit: contain;
+}
+
+/* Нижний текст */
+.rocketsciencecom {
+    position: absolute;
+    bottom: 20px; /* Смещение от нижнего края футера */
+    right: 40px; /* Смещение от правого края футера */
+    color: #999;
+    font-size: 20px;
+}
+.rocket-science1-txt {
+    position: absolute;
+    top: 2316px;
+    left: 142px;
+    font-size: 32px;
+    display: inline-block;
+    width: 254px;
+    height: 44px;
+}

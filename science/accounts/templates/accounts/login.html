@@ -1,95 +1,65 @@
-<!-- <!DOCTYPE html>
+
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'accounts/css/indexAutoriz.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/css/global.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
     <title>Login</title>
 </head>
 <body>
-    <form action="login" method="POST">
-        {% csrf_token %}
-        <input type="text" name="username" placeholder="Username"><br>
-        <input type="password" name="password" placeholder="password"><br>
-        <input type="submit">
-    </form>
-    <div>
-            <h3>
-                {% for message in messages %}
-                {{message}}
-                {% endfor %}
-            </h3>
+    <div class="parent">
+        <header class="frame-child">
+            <div class="logo-container">
+                <div class="frame-item"></div>
+                <div class="rocket-science">Rocket Science</div>
+            </div>
+            <nav>
+                <a href="#" class="glavnaya">Главная</a>
+                <a href="#" class="Onas">О нас</a>
+                <a href="#" class="obsvyas">Обратная связь</a>
+                <a href="#" class="profile">Профиль</a>
+            </nav>
+        </header>
+        
+        <main class="frame-inner">
+            <h1 class="BigLogin">Вход</h1>
+            <form action="login" method="post">
+                {% csrf_token %}
+                <input type="text" class="TextboxNumEm" name="username" placeholder="Введите номер телефона или почту" required>
+                <input type="password" class="Textboxpasswod" name="password" placeholder="Введите пароль" required>
+                <button type="submit" class="button">Вход</button>
+            </form>
+            <div class="forgotpassword">Забыли пароль?</div>
+
+            
+            <div class="social-icons">
+                <img src="{% static 'accounts/img/logo-github.svg' %}" alt="GitHub" class="icon-ionicons-logos-loggit">
+                <img src="{% static 'accounts/img/logo-chrome.svg' %}" alt="Chrome" class="icon-ionicons-logos-logchrome">
+                <img src="{% static 'accounts/img/logo-google.svg' %}" alt="Google" class="icon-ionicons-logos-loggoogle">
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <div class="logo-circle"></div>
+                <p class="footer-title">Rocket Science</p>
+            </div>
+            <p class="footer-description">Размещаем статьи и другие научные ресурсы</p>
         </div>
-    
+        <div class="footer-section">
+            <p>Контакты: +7 779 523 18 44 <br> +7 779 523 18 43</p>
+            <p>Почта: support@gmail.com <br> support1@gmail.com</p>
+        </div>
+        <div class="footer-rights">
+            © 2024 RocketScience.com
+        </div>
+    </footer>
 </body>
-</html> -->
-
-
-
-
-
-
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	<link rel="stylesheet"  href="{% static 'accounts/css/indexAutoriz.css' %} "/>
-	<link rel="stylesheet"  href="{% static 'accounts/css/global.css' %} " />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
-</head>
-<body>
-  	<div class="parent">
-    		<div class="fon"></div>
-    		<div class="shapka"></div>
-    		<div class="frame-child"></div>
-    		<div class="frame-item"></div>
-    		<div class="rocket-science">Rocket Science</div>
-    		<div class="glavnaya">Главная</div>
-    		<div class="Onas">О нас</div>
-    		<div class="obsvyas">Обратная связь</div>
-    		<div class="profile">Профиль</div>
-    		<div class="frame-inner"></div>
-
-    		<div class="forgotpassword">Забыли пароль?</div>
-    		<div class="passwordt">Пароль</div>
-    		<div class="NumEm">Номер телефона или почка</div>
-    		
-    		<!-- Форма входа -->
-    		<form action="/login" method="post">
-      		    <!-- Поля ввода текста -->
-      		    <input type="text" class="TextboxNumEm" name="username" placeholder="Введите номер телефона или почту" required>
-      		    <input type="password" class="Textboxpasswod" name="password" placeholder="Введите пароль" required>
-
-      		    <!-- Кнопка отправки формы -->
-      		    <button type="submit" class="button">Вход</button>
-    		</form>
-
-    		<div class="BigLogin">Вход</div>
-
-    		<!-- Иконки входа -->
-    		<img class="icon-ionicons-logos-loggit" alt="" src="../Проба/logo-github.svg">
-    		<img class="icon-ionicons-logos-logchrome" alt="" src="../Проба/logo-chrome.svg">
-    		<img class="icon-ionicons-logos-loggoogle" alt="" src="../Проба/logo-google.svg">
-  	</div>
-	
-	<footer class="footer">
-		<div class="footer-section">
-			<div class="footer-logo">
-				<div class="logo-circle"></div>
-				<p class="footer-title">Rocket Science</p>
-			</div>
-			<p class="footer-description">Размещаем статьи и другие научные ресурсы</p>
-		</div>
-		<div class="footer-section">
-			<p>Контакты: +7 779 523 18 44 <br> +7 779 523 18 43</p>
-			<p>Почта: support@gmail.com <br> support1@gmail.com</p>
-		</div>
-		<div class="footer-rights">
-			© 2024 RocketScience.com
-		</div>
-	</footer>
-</body>
-</html>
+</html> 

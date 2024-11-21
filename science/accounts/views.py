@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
@@ -12,14 +13,12 @@ def login(request):
         user = auth.authenticate(username=username, password = password)
         if user is not None:
             auth.login(request, user)
-            return redirect('/')
+            return redirect('profile')
         else:
             messages.info(request,'Invalid credentials')
             return redirect('login')
-
     else:
         return render(request, 'accounts/login.html')
-
 
 
 
@@ -49,3 +48,10 @@ def register(request):
             return redirect('register')
     else:
         return render(request,'accounts/register.html')
+    
+
+
+@login_required
+def profile(request):
+    return render(request, 'accounts/profile.html', {'user': request.user})
+    

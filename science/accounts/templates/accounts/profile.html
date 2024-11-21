@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'accounts/css/profilePage.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
+    <title>Профиль пользователя</title>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-photo">
+                <img src="user-photo.jpg" alt="Фото пользователя">
+            </div>
+            <div class="profile-info">
+                <h2 class="user-name">{{ user.first_name }}</h2>
+                <p class="@">{{ user.username }}</p>
+            </div>
+        </div>
+        <div class="profile-details">
+            <p><strong>Имя:</strong> {{ user.first_name }}</p>
+            <p><strong>Фамилия:</strong> {{ user.last_name }}</p>
+            <p><strong>Почта:</strong> {{ user.email }}</p>
+            <p><strong>Псевдоним:</strong> {{ user.username }}</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -15,6 +15,7 @@
     top: 212px;
     left: 146px;
     font-size: 36px;
+    color: #fff;
     display: inline-block;
     text-align: center;
     width: 523px;
@@ -185,7 +186,7 @@
 }
 
 /* Контейнер для кнопок в основной части */
-.button-container {
+.main-content {
     display: flex;
     gap: 10px;
 }

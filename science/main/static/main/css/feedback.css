@@ -1,115 +1,27 @@
-.frame-child {
+
+
+/* Main Section */
+.feedback-icon {
     position: absolute;
-    top: 5px;
-    left: 1px;
-    background-color: #1e1e1e;
-    width: 1919px;
-    height: 122px;
-}
-.frame-item {
-    position: absolute;
-    top: 27px;
-    left: 37px;
-    border-radius: 50%;
-    background-color: #d9d9d9;
-    width: 68px;
-    height: 68px;
-}
-.frame-inner {
-    position: absolute;
-    top: 34px;
-    left: 1614px;
-    border-radius: 20px;
-    width: 95px;
-    height: 54px;
-}
-.rectangle-icon {
-    position: absolute;
-    top: 34px;
-    left: 1732px;
-    border-radius: 20px;
-    width: 180px;
-    height: 54px;
-}
-.rocket-science {
-    position: absolute;
-    top: 39px;
-    left: 140px;
-    font-size: 32px;
-    display: inline-block;
-    width: 254px;
-    height: 44px;
-}
-.div {
-    position: absolute;
-    top: 44px;
-    left: 650px;
-    display: inline-block;
-    width: 111px;
-    height: 44px;
-}
-.div1 {
-    position: absolute;
-    top: 44px;
-    left: 840px;
-    display: inline-block;
-    width: 109px;
-    height: 44px;
-}
-.div2 {
-    position: absolute;
-    top: 44px;
-    left: 1009px;
-    display: inline-block;
-    width: 195px;
-    height: 44px;
-}
-.div3 {
-    position: absolute;
-    top: 44px;
-    left: 1265px;
-    display: inline-block;
-    width: 108px;
-    height: 44px;
-}
-.div4 {
-    position: absolute;
-    top: 44px;
-    left: 1627px;
-    text-align: center;
-    display: inline-block;
-    width: 70px;
-    height: 44px;
-}
-.div5 {
-    position: absolute;
-    top: 44px;
-    left: 1741px;
-    text-align: center;
-    display: inline-block;
-    width: 161px;
-    height: 44px;
-}
-.rectangle-div {
-    position: absolute;
-    top: 165px;
+    top: 161px;
     left: 90px;
     border-radius: 20px;
     background-color: #1e1e1e;
     width: 657px;
     height: 176px;
 }
-.b {
+.feedback1-txt {
     position: absolute;
     top: 212px;
     left: 146px;
     font-size: 36px;
+    color: #fff;
     display: inline-block;
     text-align: center;
     width: 523px;
     height: 97px;
 }
-.frame-child1 {
+.feedback-main-icon {
     position: absolute;
     top: 304px;
     left: 90px;
@@ -118,7 +30,214 @@
     width: 1772px;
     height: 1891px;
 }
-.frame-chiild2 {
+
+/* Контейнер1 */
+.msg-theme-container {
+    position: absolute;
+    top: 412px;
+    left: 143px;
+    width: 1666px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("../img/Rectangle fd1.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.msg-theme-input {
+    flex: 1;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+}
+
+/* Стиль текста-заполнителя */
+.msg-theme-input::placeholder {
+    color: #b5b5b5;
+    font-size: 20px;
+}
+
+/* Контейнер2 */
+.msg-title-container {
+    position: absolute;
+    top: 563px;
+    left: 143px;
+    width: 1666px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("../img/Rectangle fd2.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.msg-title-input {
+    flex: 1;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+}
+
+/* Стиль текста-заполнителя */
+.msg-title-input::placeholder {
+    color: #b5b5b5;
+    font-size: 20px;
+}
+
+/* Контейнер3 */
+.msg-container {
+    position: absolute;
+    top: 783px;
+    left: 143px;
+    width: 1666px;
+    height: 993px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 20px;
+    background-image: url("../img/Rectangle fd3.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.msg-input {
+    position: relative;
+    top: 50px;
+    width: calc(100% - 40px); /* Учёт отступов */
+    height: 890px;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+    resize: none; /* Убираем возможность изменения размера */
+    padding: 10px 40px 10px 40px; /* Отступы внутри поля */
+    line-height: 1.5; /* Интервал между строками */
+}
+
+/* Стиль текста-заполнителя */
+.msg-input::placeholder {
+    color: #b5b5b5;
+    font-size: 20px;
+}
+
+/* Контейнер4 */
+.mail-container {
+    position: absolute;
+    top: 1851px;
+    left: 143px;
+    width: 1666px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("../img/Rectangle fd4.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.mail-input {
+    flex: 1;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+}
+
+/* Стиль текста-заполнителя */
+.mail-input::placeholder {
+    color: #b5b5b5;
+    font-size: 20px;
+}
+
+/* Контейнер для кнопок в основной части */
+.main-content {
+    display: flex;
+    gap: 10px;
+}
+
+/* Стиль кнопок в основной части */
+.main-content button {
+    position: absolute;
+    border-radius: 20px;
+    width: 458px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #2d2d2d;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-content button:hover {
+    background-color: #444;
+}
+
+/* Кнопка "Отправить" */
+.main-content .send-button {
+    top: 2009px;
+    left: 143px;
+}
+
+/* Кнопка "Очистить" */
+.main-content .clear-button {
+    top: 2009px;
+    left: 652px;
+}
+
+/* Иконки в кнопках */
+.main-content button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Цвет текста на кнопках */
+.main-content button span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.msg-theme-icon {
     position: absolute;
     top: 412px;
     left: 143px;
@@ -126,17 +245,16 @@
     width: 1666px;
     height: 111px;
 }
-.div6 {
+.mail-txt {
     position: absolute;
     top: 418px;
     left: 201px;
-    color: #2d2d2d;
     display: flex;
     align-items: center;
     width: 1186px;
     height: 92px;
 }
-.frame-child3 {
+.msg-title-icon {
     position: absolute;
     top: 563px;
     left: 143px;
@@ -144,7 +262,7 @@
     width: 1666px;
     height: 111px;
 }
-.diiv7 {
+.msg-theme-txt {
     position: absolute;
     top: 426px;
     left: 208px;
@@ -153,7 +271,7 @@
     width: 1548px;
     height: 92px;
 }
-.diiv8 {
+.msg-title-txt {
     position: absolute;
     top: 572px;
     left: 208px;
@@ -162,7 +280,7 @@
     width: 1548px;
     height: 93px;
 }
-.frame-child4 {
+.msg-icon {
     position: absolute;
     top: 783px;
     left: 143px;
@@ -170,7 +288,7 @@
     width: 1666px;
     height: 993px;
 }
-.div9 {
+.msg-txt {
     position: absolute;
     top: 821px;
     left: 208px;
@@ -178,7 +296,8 @@
     width: 1548px;
     height: 914px;
 }
-.frame-child5 {
+
+.mail-icon {
     position: absolute;
     top: 1851px;
     left: 143px;
@@ -186,7 +305,7 @@
     width: 1666px;
     height: 111px;
 }
-.div10 {
+.mail-txt {
     position: absolute;
     top: 1861px;
     left: 208px;
@@ -195,7 +314,7 @@
     width: 1186px;
     height: 96px;
 }
-.frame-child6 {
+.send-icon1 {
     position: absolute;
     top: 2009px;
     left: 143px;
@@ -203,7 +322,7 @@
     width: 458px;
     height: 111px;
 }
-.frame-child7 {
+.clear-icon1 {
     position: absolute;
     top: 2009px;
     left: 652px;
@@ -211,7 +330,7 @@
     width: 458px;
     height: 111px;
 }
-.div11 {
+.send-txt1 {
     position: absolute;
     top: 2019px;
     left: 231px;
@@ -222,7 +341,7 @@
     width: 281px;
     height: 95px;
 }
-.div12 {
+.clear-txt1 {
     position: absolute;
     top: 2012px;
     left: 738px;
@@ -233,133 +352,5 @@
     width: 280px;
     height: 95px;
 }
-.frame-child2 {
-    position: absolute;
-    top: 2255px;
-    left: -1px;
-    width: 1924px;
-    height: 245px;
-}
-.rocketsciencecom {
-    position: absolute;
-    top: 2425px;
-    left: 1584px;
-    color: #999;
-    display: inline-block;
-    width: 339px;
-    height: 29px;
-}
-.supportgmailcom {
-    margin: 0;
-}
-.support1gmailcom {
-    margin: 0;
-    white-space: pre-wrap;
-}
-.supportgmailcom-support1gma {
-    position: absolute;
-    top: 2398px;
-    left: 1002px;
-    color: #999;
-    display: inline-block;
-    width: 365px;
-    height: 84px;
-}
-.div7 {
-    position: absolute;
-    top: 2398px;
-    left: 583px;
-    color: #999;
-    display: inline-block;
-    width: 365px;
-    height: 84px;
-}
-.ellipse-div {
-    position: absolute;
-    top: 2304px;
-    left: 39px;
-    border-radius: 50%;
-    background-color: #d9d9d9;
-    width: 68px;
-    height: 68px;
-}
-.rocket-science1 {
-    position: absolute;
-    top: 2316px;
-    left: 142px;
-    font-size: 32px;
-    display: inline-block;
-    width: 254px;
-    height: 44px;
-}
-.group-icon {
-    position: absolute;
-    height: 2.63%;
-    width: 3.46%;
-    top: 92.24%;
-    right: 22.75%;
-    bottom: 5.13%;
-    left: 73.79%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.vector-icon {
-    position: absolute;
-    height: 2.64%;
-    width: 4.05%;
-    top: 92.24%;
-    right: 16.46%;
-    bottom: 5.12%;
-    left: 79.49%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.vector-icon1 {
-    position: absolute;
-    height: 2.52%;
-    width: 3.18%;
-    top: 92.36%;
-    right: 11.03%;
-    bottom: 5.12%;
-    left: 85.79%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.vector-icon2 {
-    position: absolute;
-    height: 2.4%;
-    width: 4.36%;
-    top: 92.48%;
-    right: 3.74%;
-    bottom: 5.12%;
-    left: 91.9%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.div8 {
-    position: absolute;
-    top: 2400px;
-    left: 39px;
-    color: #999;
-    display: inline-block;
-    width: 365px;
-    height: 84px;
-}
-.rectangle-parent {
-    width: 100%;
-    position: relative;
-    background-color: #2d2d2d;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    height: 2500px;
-    overflow: hidden;
-    text-align: left;
-    font-size: 24px;
-    color: #fff;
-    font-family: Inter;
-}
+
 

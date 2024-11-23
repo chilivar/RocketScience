@@ -3,9 +3,16 @@
 {% block css %}<link rel="stylesheet" href="{% static 'main/css/index.css' %}" />{% endblock %}
 
 {% block content %}
-<img class="frame-child1" alt="" src="{% static 'main/img/Rectangle 16.svg' %}">
-<div class="div6">Напишите что-нибудь для поиска</div>
-<div class="icon-magnifying-glass">
-    <img class="vector-icon4" alt="" src="{% static 'main/img/glass.svg' %}">
-</div>
+<main class="content">
+            <div class="search-container">
+                <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Напишите что-нибудь для поиска"
+                >
+                <div class="icon-magnifying-glass">
+                    <img class="vector-icon4" alt="" src="{% static 'main/img/glass.svg' %}">
+                </div>
+            </div>
+        </main>
 {% endblock %}

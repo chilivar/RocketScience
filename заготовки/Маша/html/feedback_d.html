@@ -5,6 +5,7 @@
   	<meta name="viewport" content="initial-scale=1, width=device-width">
   	
   	<link rel="stylesheet"  href="./feedback_d.css" />
+	<link rel="stylesheet" href="./global.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" /> 	  		
 </head>
 
@@ -13,18 +14,22 @@
 
         <!-- Header Section -->
         <header class="header">
-            <div class="header-icon"></div>
             <div class="logo"></div>
-            <img class="sign-in-icon" alt="" src="Rectangle 1.svg">
-            <img class="log-in-icon" alt="" src="Rectangle 2.svg">
             <div class="rocket-science-txt">Rocket Science</div>
-            <div class="main-txt">Главная</div>
-            <div class="about-us-txt">О нас</div>
-            <div class="feedback-txt">Обратная связь</div>
-            <div class="profile-txt">Профиль</div>
-            <div class="sign-in-txt">Вход</div>
-            <div class="log-in-txt">Регистрация</div>
-            
+            <nav class="nav">
+                <div class="main-txt">Главная</div>
+                <div class="about-us-txt">О нас</div>
+                <div class="feedback-txt">Обратная связь</div>
+                <div class="profile-txt">Профиль</div>
+            </nav>
+            <div class="button-container">
+                 <button class="sign-in-button">
+                    <span>Вход</span>
+                </button>
+                <button class="log-in-button">
+                    <span>Регистрация</span>
+                </button>
+            </div>
         </header>
 
 		<!-- Main Content Section -->
@@ -67,7 +72,7 @@
                     placeholder="Почта для обратной связи" 
                 >
 			</div>
-			<div class="button-container">
+			<div class="main-content">
 				<button class="send-button">
 				   <span>Отправить</span>
 			   </button>
@@ -79,25 +84,42 @@
 		
 		<!-- Footer Section -->
 		<footer class="footer">
-			<div class="rectangle-div">
-    		</div>
-			<img class="footer-icon" alt="" src="Rectangle 3.svg">           
-			<div class="logo-icon"></div>
-			<div class="description-txt">Размещаем статьи и другие научные ресурсы</div>
-			<img class="group-icon" alt="" src="Group.svg">
-			<img class="vector-icon" alt="" src="Vector.svg">    		
-			<img class="vector-icon1" alt="" src="Vector1.svg">   		
-			<img class="vector-icon2" alt="" src="Vector2.svg">
-			<div class="rocketsciencecom">© 2024 RocketScience.com</div>
-			<div class="supportgmail">
-				<p class="gmail-txt">Почта: support@gmail.com</p>
-				<p class="gmail1-txt">support1@gmail.com</p>
-			</div>
-			<div class="contacts">
-				<p class="gmail-txt">Контакты: +7 776 523 18 44</p>
-				<p class="gmail1-txt">+7 776 523 18 43</p>
-			</div>
-		</footer>
+            <div style="display: flex; align-items: center;">
+                <div>
+                    <div class="logo-icon"></div>
+                    <div class="rocket-science-txt">Rocket Science</div>
+                    <div class="description-txt">Размещаем статьи и другие научные ресурсы</div>
+                </div>
+                <div class="contact-support">
+                    <div class="contacts">
+                        <p>Контакты:</p>
+                        <p>+7 776 523 18 44</p>
+                        <p>+7 776 523 18 43</p>
+                    </div>
+                    <div class="supportgmail">
+                        <p>Почта:</p>
+                        <p>support@gmail.com</p>
+                        <p>support1@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="icons-container">
+                <a href="https://example.com/git" target="_blank">
+                    <img class="group-icon" alt="Git" src="Group.svg">
+                </a>
+                <a href="https://example.com/twitter" target="_blank">
+                    <img class="vector-icon" alt="Twitter" src="Vector.svg">
+                </a>
+                <a href="https://example.com/linkedin" target="_blank">
+                    <img class="vector-icon1" alt="LinkedIn" src="Vector1.svg">
+                </a>
+                <a href="https://example.com/instagram" target="_blank">
+                    <img class="vector-icon2" alt="Instagram" src="Vector2.svg">
+                </a>
+            </div>
+            <div class="rocketsciencecom">© 2024 RocketScience.com</div>
+        </footer>
 		</div>	
   	
 </body>

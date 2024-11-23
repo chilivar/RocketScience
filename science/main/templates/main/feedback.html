@@ -4,28 +4,52 @@
 
 
 {% block content %}
-<div class="rectangle-div">
-</div>
-<b class="b">Обратная связь</b>
-<div class="frame-child1">
-</div>
-<img class="frame-chiild2" alt="" src="{% static 'main/img/Rectangle 28.svg' %}">
+<main class="content">
+			<div class="feedback-icon"></div>
+			<b class="feedback1-txt">Обратная связь</b>
+			<div class="feedback-main-icon"></div>
 
-<div class="div6">Почта для обратной связи</div>
-<img class="frame-child3" alt="" src="{% static 'main/img/Rectangle 27.svg' %}">
+			<div class="msg-theme-container">
+				<input
+                    type="text"
+                    class="msg-theme-input"
+                    placeholder="Тема письма"
+                >
+			</div>
 
-<div class="diiv7">Тема письма</div>
-<div class="diiv8">Заголовок сообщения</div>
-<img class="frame-child4" alt="" src="{% static 'main/img/Rectangle 20.svg' %}">
 
-<div class="div9">Текст сообщения</div>
-<img class="frame-child5" alt="" src="{% static 'main/img/Rectangle 21.svg' %}">
+			<div class="msg-title-container">
+				<input
+                    type="text"
+                    class="msg-title-input"
+                    placeholder="Заголовок сообщения"
+                >
+			</div>
 
-<div class="div10">Почта для обратной связи</div>
-<img class="frame-child6" alt="" src="{% static 'main/img/Rectangle 22.svg' %}">
 
-<img class="frame-child7" alt="" src="{% static 'main/img/Rectangle 23.svg' %}">
+			<div class="msg-container">
+				<textarea
+                    type="text"
+                    class="msg-input"
+                    placeholder="Текст сообщения"
+                ></textarea>
+			</div>
 
-<div class="div11">Отправить</div>
-<div class="div12">Очистить</div>
+
+			<div class="mail-container">
+				<input
+                    type="text"
+                    class="mail-input"
+                    placeholder="Почта для обратной связи"
+                >
+			</div>
+			<div class="main-content">
+				<button class="send-button">
+				   <span>Отправить</span>
+			   </button>
+			   <button class="clear-button">
+				   <span>Очистить</span>
+			   </button>
+		   </div>
+		</main>
 {% endblock %}

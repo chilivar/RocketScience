@@ -1,18 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #161515; 
+    }
 
-body {
-    font-family: 'Kodchasan', sans-serif;
-    background-color: #3c3838;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh; 
-}
+
 
 .parent {
     display: flex;
@@ -34,32 +28,63 @@ body {
     width: 48%; 
 }
 .frame-child {
+    position: relative; 
     width: 100%;
+    height: 122px;
     background-color: #1e1e1e;
-    padding: 20px 50px;
-    display: flex;
-    align-items: center;
 }
 
 .frame-item {
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    top: 27px;
+    left: 37px;
+    width: 68px;
+    height: 68px;
     background-color: #d9d9d9;
     border-radius: 50%;
-    margin-right: 15px;
 }
 
 .rocket-science {
+    position: absolute;
+    top: 44px;
+    left: 140px;
     font-size: 20px;
     font-family: 'Inter', sans-serif;
-    margin-right: auto;
+    color: white;
 }
 
-nav .nav-item {
-    margin: 0 15px;
+.nav-item {
+    position: absolute;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
     color: #d9d9d9;
     text-decoration: none;
-    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #3CAAB1;
+}
+
+
+.glavnaya {
+    top: 44px;
+    left: 650px; 
+}
+
+.Onas {
+    top: 44px;
+    left: 850px; 
+}
+
+.obsvyas {
+    top: 44px;
+    left: 1050px;
+}
+
+.profile {
+    top: 44px;
+    left: 1250px;
 }
 
 .registration-form {

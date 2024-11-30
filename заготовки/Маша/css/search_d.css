@@ -1,20 +1,16 @@
 
 /* Main Section */
-.search-icon {
-    position: absolute;
-    top: 339px;
-    left: 100px;
-    border-radius: 20px;
-    width: 1751px;
-    height: 100px;
+.content {
+    flex: 1; /* Контент занимает всё доступное пространство */
+    padding: 20px;
 }
+
 /* Контейнер поиска */
 .search-container {
-    position: absolute;
-    top: 339px;
-    left: 100px;
-    width: 1751px;
-    height: 100px;
+    position: relative;
+    max-width: 100%; /* Позволяет контейнеру растягиваться по ширине */
+    width: 90%; /* Устанавливаем ширину контейнера на 100% */
+    height: 90px;
     display: flex;
     align-items: center;
     border-radius: 20px;
@@ -23,11 +19,14 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: 0 20px;
+    box-sizing: border-box; /* Чтобы padding не вылезал за пределы */
+    top: 100px;
+    margin: 110px; 
 }
 
 /* Поле ввода */
 .search-input {
-    flex: 1;
+    flex: 1; /* Поле ввода растягивается по ширине */
     height: 80%;
     border: none;
     border-radius: 20px;
@@ -48,23 +47,13 @@
 .icon-magnifying-glass {
     position: absolute;
     top: 25px;
-    right: 50px;
-    width: 50px;
-    height: 50px;
+    right: 45px; /* Немного уменьшаем отступ, чтобы лупа не выходила за пределы */
+    width: 45px;
+    height: 45px;
     cursor: pointer;
     z-index: 3;
 }
 
-.search-txt {
-    position: absolute;
-    top: 361px;
-    left: 125px;
-    color: #b5b5b5;
-    display: flex;
-    align-items: center;
-    width: 694px;
-    height: 55px;
-}
 .vector-icon4 {
     position: absolute;
     height: 100%;
@@ -77,10 +66,50 @@
     overflow: hidden;
     max-height: 100%;
 }
-.icon-magnifying-glass1 {
-    width: 100%;
-    position: relative;
-    top: 360px;
-    left: 650px;
-    height: 49px;
+
+
+/* Адаптивность: Медиазапросы для разных экранов */
+
+@media (max-width: 768px) {
+    /* Для экранов меньшего размера (например, телефоны) */
+    .search-container {
+        padding: 0 10px;
+        height: 80px;
+        margin-top: 20px; /* Отступ сверху для мобильных устройств */
+        margin-left: 10px; /* Меньше отступы по бокам */
+        margin-right: 10px;
+    }
+    
+    .search-input {
+        font-size: 18px; /* Уменьшаем размер шрифта на мобильных устройствах */
+    }
+    
+    .icon-magnifying-glass {
+        top: 15px; /* Меняем положение иконки */
+        right: 10px;
+    }
 }
+
+@media (max-width: 480px) {
+    /* Для очень маленьких экранов (например, смартфоны) */
+    .search-container {
+        padding: 0 5px;
+        height: 60px;
+        margin-top: 10px; /* Меньше отступ сверху */
+        margin-left: 5px; /* Меньше отступы по бокам */
+        margin-right: 5px;
+    }
+
+    .search-input {
+        font-size: 16px; /* Ещё больше уменьшаем шрифт */
+    }
+
+    .icon-magnifying-glass {
+        top: 10px;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+}
+

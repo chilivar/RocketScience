@@ -1,5 +1,4 @@
 
-
 /* Main Section */
 .feedback-icon {
     position: absolute;
@@ -22,13 +21,13 @@
     height: 97px;
 }
 .feedback-main-icon {
-    position: absolute;
-    top: 304px;
-    left: 90px;
+
+    margin-top: 284px;
+    margin-left: 70px;
     border-radius: 20px;
     background-color: #1e1e1e;
     width: 1772px;
-    height: 1891px;
+    height: 1890px;
 }
 
 /* Контейнер1 */

@@ -10,7 +10,7 @@ html, body {
 .page {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh; /* Минимальная высота страницы */
     box-sizing: border-box;
     background-color: #2d2d2d;
 }
@@ -20,9 +20,9 @@ html, body {
     padding: 20px;
 }
 
-
 body {
     overflow-x: hidden;
+    background-color: #2d2d2d;
 }
 * {
     margin: 0;
@@ -31,9 +31,19 @@ body {
     border: none;
     outline: none;
 }
+* {
+    color: white;
+}
 
 /* Header Section */
+.header * {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .header {
+    position: absolute;
     display: flex;
     align-items: center; /* Выравнивание по вертикали */
     justify-content: space-between; /* Распределение элементов с равными промежутками */
@@ -62,15 +72,16 @@ body {
 /* Навигация */
 .nav {
     display: flex;
-    justify-content: space-between; /* Равномерно распределить элементы по горизонтали */
+    justify-content: center; /* Равномерно распределить элементы по горизонтали */
+    gap: 100px; /* Расстояние между элементами */
     flex-grow: 1; /* Навигация займет оставшееся пространство между логотипом и кнопками */
-    align-items: center; /* Вертикальное выравнивание элементов */
 }
 
 .nav div {
     font-size: 24px;
     color: #fff;
     cursor: pointer;
+    text-align: center;
 }
 
 /* Элементы навигации при наведении */
@@ -84,12 +95,14 @@ button {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 10px 20px;
+    padding: 12px 30px !important;
     border: none;
     border-radius: 20px;
     background-color: #2d2d2d;
     cursor: pointer;
     transition: all 0.3s ease;
+    height: auto; /* Позволяем кнопке адаптировать высоту */
+    box-sizing: border-box; /* Включаем отступы в расчеты размеров */
 }
 
 button:hover {
@@ -110,78 +123,34 @@ button span {
     gap: 10px;
 }
 
+/* Адаптивность */
 @media (max-width: 768px) {
     .header {
         flex-wrap: wrap; /* Разрешаем перенос строк */
-        height: auto;
-        padding: 10px;
+        padding: 20px;
+        height: auto; /* Высота адаптируется под контент */
     }
 
     .rocket-science-txt {
-        margin: 10px 0;
+        margin-bottom: 10px;
         text-align: center;
         width: 100%;
     }
 
     .nav {
-        flex-wrap: wrap;
+        justify-content: center; /* Центрируем элементы навигации */
+        gap: 20px;
+        flex-wrap: wrap; /* Разрешаем перенос строк */
+    }
+
+    .button-container {
         justify-content: center;
-        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
     }
 }
 
 
-.logo {
-    position: absolute;
-    top: 27px;
-    left: 37px;
-    border-radius: 50%;
-    background-color: #d9d9d9;
-    width: 68px;
-    height: 68px;
-}
-
-.rocket-science-txt {
-    position: absolute;
-    top: 39px;
-    left: 140px;
-    font-size: 32px;
-    display: inline-block;
-    width: 254px;
-    height: 44px;
-}
-.main-txt {
-    position: absolute;
-    top: 44px;
-    left: 650px;
-    display: inline-block;
-    width: 111px;
-    height: 44px;
-}
-.about-us-txt {
-    position: absolute;
-    top: 44px;
-    left: 840px;
-    display: inline-block;
-    width: 109px;
-    height: 44px;
-}
-.feedback-txt {
-    position: absolute;
-    top: 44px;
-    left: 1009px;
-    display: inline-block;
-    width: 195px;
-    height: 44px;
-}
-.profile-txt {
-    position: absolute;
-    top: 44px;
-    left: 1265px;
-    display: inline-block;
-    width: 108px;
-    height: 44px;
-}
 
 
 
@@ -216,28 +185,28 @@ button span {
     background-color: #d9d9d9;
     width: 68px;
     height: 68px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .description-txt {
     color: #999;
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 0px;
     line-height: 1.5;
 }
 
 /* Контейнер для контактов и почты */
 .contact-support {
     display: flex;
-    gap: 400px; /* Расстояние между блоками */
+    gap: 300px; /* Расстояние между блоками */
     margin-top: 10px;
-    margin-left: 400px; 
+    margin-left: 200px;
 }
 
 .contacts, .supportgmail {
     margin: 0;
     font-size: 20px; /* Размер шрифта */
-    
+
 }
 
 .contacts p:first-child,
@@ -273,10 +242,11 @@ button span {
     color: #999;
     font-size: 20px;
 }
-.rocket-science1-txt {
+
+.rocket-science-txt {
     position: absolute;
-    top: 2316px;
-    left: 142px;
+    top: 39px;
+    left: 120px;
     font-size: 32px;
     display: inline-block;
     width: 254px;

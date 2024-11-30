@@ -1,38 +1,41 @@
 
+
 /* Main Section */
 .about-icon {
     position: absolute;
-    top: 165px;
+    top: 161px;
     left: 97px;
     border-radius: 20px;
     background-color: #1e1e1e;
-    width: 360px;
-    height: 130px;
+    width: 657px;
+    height: 176px;
 }
 .about-txt {
     z-index: 10;
     position: absolute;
-    top: 195px;
-    left: 206px;
+    top: 212px;
+    left: 146px;
     font-size: 36px;
+    color: #fff;
     display: inline-block;
     text-align: center;
-    width: 141px;
-    height: 53px;
+    width: 523px;
+    height: 97px;
 }
 .info-icon {
-    position: absolute;
-    top: 249px;
-    left: 97px;
+    
+    margin-top: 245px;
+    margin-left: 77px;
     border-radius: 20px;
     background-color: #1e1e1e;
-    width: 1755px;
+    width: 90%;
     height: 1939px;
 }
 .info-txt {
     position: absolute;
     top: 340px;
-    left: 171px;
+    left: 200px;
+    color: #fff;
     font-size: 32px;
     display: inline-block;
     width: 1580px;

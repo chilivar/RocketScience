@@ -1,191 +1,16 @@
-.page {
-    width: 100%;
-    position: relative;
-    background-color: #2d2d2d;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    height: 2500px;
-    overflow: hidden;
-    text-align: left;
-    font-size: 24px;
-    color: #fff;
-    font-family: Inter;
-}
-
-/* Header Section */
-.header {
-    display: flex;
-    align-items: center; /* Выравнивание по вертикали */
-    justify-content: space-between; /* Распределение элементов с равными промежутками */
-    width: 100%;
-    height: 122px;
-    background-color: #1e1e1e;
-    padding: 0 20px; /* Отступы по бокам */
-    box-sizing: border-box; /* Включаем отступы в размеры элемента */
-}
-
-/* Логотип */
-.logo {
-    width: 68px;
-    height: 68px;
-    border-radius: 50%;
-    background-color: #d9d9d9;
-}
-
-/* Основной текст "Rocket Science" */
-.rocket-science-txt {
-    font-size: 32px;
-    color: #fff;
-    margin-left: 20px;
-}
-
-/* Навигация */
-.nav {
-    display: flex;
-    gap: 20px; /* Расстояние между элементами */
-}
-
-.nav div {
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-}
-
-/* Общий стиль кнопок */
-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: #2d2d2d;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background-color: #444;
-}
-
-/* Иконки в кнопках */
-button img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Текст в кнопках */
-button span {
-    font-size: 24px;
-    color: #fff;
-    font-weight: bold;
-}
-
-/* Контейнер для кнопок */
-.button-container1 {
-    display: flex;
-    gap: 10px;
-}
-
-@media (max-width: 768px) {
-    .header {
-        flex-wrap: wrap; /* Разрешаем перенос строк */
-        height: auto;
-        padding: 10px;
-    }
-
-    .rocket-science-txt {
-        margin: 10px 0;
-        text-align: center;
-        width: 100%;
-    }
-
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-}
-
-.header-icon {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: #1e1e1e;
-    width: 1920px;
-    height: 122px;
-}
-.logo {
-    position: absolute;
-    top: 27px;
-    left: 37px;
-    border-radius: 50%;
-    background-color: #d9d9d9;
-    width: 68px;
-    height: 68px;
-}
-
-.rocket-science-txt {
-    position: absolute;
-    top: 39px;
-    left: 140px;
-    font-size: 32px;
-    display: inline-block;
-    width: 254px;
-    height: 44px;
-}
-.main-txt {
-    position: absolute;
-    top: 44px;
-    left: 650px;
-    display: inline-block;
-    width: 111px;
-    height: 44px;
-}
-.about-us-txt {
-    position: absolute;
-    top: 44px;
-    left: 840px;
-    display: inline-block;
-    width: 109px;
-    height: 44px;
-}
-.feedback-txt {
-    position: absolute;
-    top: 44px;
-    left: 1009px;
-    display: inline-block;
-    width: 195px;
-    height: 44px;
-}
-.profile-txt {
-    position: absolute;
-    top: 44px;
-    left: 1265px;
-    display: inline-block;
-    width: 108px;
-    height: 44px;
-}
-
-
 
 /* Main Section */
-.search-icon {
-    position: absolute;
-    top: 339px;
-    left: 100px;
-    border-radius: 20px;
-    width: 1751px;
-    height: 100px;
+.content {
+    flex: 1; /* Контент занимает всё доступное пространство */
+    padding: 20px;
 }
+
 /* Контейнер поиска */
 .search-container {
-    position: absolute;
-    top: 339px;
-    left: 100px;
-    width: 1751px;
-    height: 100px;
+    position: relative;
+    max-width: 100%; /* Позволяет контейнеру растягиваться по ширине */
+    width: 90%; /* Устанавливаем ширину контейнера на 100% */
+    height: 90px;
     display: flex;
     align-items: center;
     border-radius: 20px;
@@ -194,11 +19,14 @@ button span {
     background-position: center;
     background-repeat: no-repeat;
     padding: 0 20px;
+    box-sizing: border-box; /* Чтобы padding не вылезал за пределы */
+    top: 100px;
+    margin: 110px; 
 }
 
 /* Поле ввода */
 .search-input {
-    flex: 1;
+    flex: 1; /* Поле ввода растягивается по ширине */
     height: 80%;
     border: none;
     border-radius: 20px;
@@ -219,23 +47,13 @@ button span {
 .icon-magnifying-glass {
     position: absolute;
     top: 25px;
-    right: 50px;
-    width: 50px;
-    height: 50px;
+    right: 45px; /* Немного уменьшаем отступ, чтобы лупа не выходила за пределы */
+    width: 45px;
+    height: 45px;
     cursor: pointer;
     z-index: 3;
 }
 
-.search-txt {
-    position: absolute;
-    top: 361px;
-    left: 125px;
-    color: #b5b5b5;
-    display: flex;
-    align-items: center;
-    width: 694px;
-    height: 55px;
-}
 .vector-icon4 {
     position: absolute;
     height: 100%;
@@ -248,131 +66,50 @@ button span {
     overflow: hidden;
     max-height: 100%;
 }
-.icon-magnifying-glass1 {
-    width: 100%;
-    position: relative;
-    top: 360px;
-    left: 650px;
-    height: 49px;
+
+
+/* Адаптивность: Медиазапросы для разных экранов */
+
+@media (max-width: 768px) {
+    /* Для экранов меньшего размера (например, телефоны) */
+    .search-container {
+        padding: 0 10px;
+        height: 80px;
+        margin-top: 20px; /* Отступ сверху для мобильных устройств */
+        margin-left: 10px; /* Меньше отступы по бокам */
+        margin-right: 10px;
+    }
+    
+    .search-input {
+        font-size: 18px; /* Уменьшаем размер шрифта на мобильных устройствах */
+    }
+    
+    .icon-magnifying-glass {
+        top: 15px; /* Меняем положение иконки */
+        right: 10px;
+    }
 }
 
-/* Footer Section */
+@media (max-width: 480px) {
+    /* Для очень маленьких экранов (например, смартфоны) */
+    .search-container {
+        padding: 0 5px;
+        height: 60px;
+        margin-top: 10px; /* Меньше отступ сверху */
+        margin-left: 5px; /* Меньше отступы по бокам */
+        margin-right: 5px;
+    }
 
-.footer-icon {
-    position: absolute;
-    top: 2255px;
-    left: -1px;
-    width: 1924px;
-    height: 245px;
-}
-.rocketsciencecom {
-    position: absolute;
-    top: 2425px;
-    left: 1584px;
-    color: #999;
-    display: inline-block;
-    width: 339px;
-    height: 29px;
-}
-.gmail-txt {
-    margin: 0;
-}
-.gmail1-txt {
-    margin: 0;
-    white-space: pre-wrap;
-}
-.supportgmail{
-    position: absolute;
-    top: 2398px;
-    left: 1002px;
-    color: #999;
-    display: inline-block;
-    width: 365px;
-    height: 84px;
-}
-.contacts {
-    position: absolute;
-    top: 2398px;
-    left: 583px;
-    color: #999;
-    display: inline-block;
-    width: 365px;
-    height: 84px;
-}
-.logo-icon {
-    position: absolute;
-    top: 2304px;
-    left: 39px;
-    border-radius: 50%;
-    background-color: #d9d9d9;
-    width: 68px;
-    height: 68px;
-}
-.rocket-science1-txt {
-    position: absolute;
-    top: 2316px;
-    left: 142px;
-    font-size: 32px;
-    display: inline-block;
-    width: 254px;
-    height: 44px;
-}
-.group-icon {
-    position: absolute;
-    height: 2.63%;
-    width: 3.46%;
-    top: 92.24%;
-    right: 22.75%;
-    bottom: 5.13%;
-    left: 73.79%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.vector-icon {
-    position: absolute;
-    height: 2.64%;
-    width: 4.05%;
-    top: 92.24%;
-    right: 16.46%;
-    bottom: 5.12%;
-    left: 79.49%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.vector-icon1 {
-    position: absolute;
-    height: 2.52%;
-    width: 3.18%;
-    top: 92.36%;
-    right: 11.03%;
-    bottom: 5.12%;
-    left: 85.79%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.vector-icon2 {
-    position: absolute;
-    height: 2.4%;
-    width: 4.36%;
-    top: 92.48%;
-    right: 3.74%;
-    bottom: 5.12%;
-    left: 91.9%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.description-txt {
-    position: absolute;
-    top: 2400px;
-    left: 39px;
-    color: #999;
-    display: inline-block;
-    width: 365px;
-    height: 84px;
-}
+    .search-input {
+        font-size: 16px; /* Ещё больше уменьшаем шрифт */
+    }
 
+    .icon-magnifying-glass {
+        top: 10px;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+}
 

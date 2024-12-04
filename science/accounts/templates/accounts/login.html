@@ -1,65 +1,116 @@
-
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'accounts/css/indexAutoriz.css' %}">
-    <link rel="stylesheet" href="{% static 'accounts/css/global.css' %}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
-    <title>Login</title>
+    <title>Rocket Science - Вход</title>
+    <link rel="stylesheet" href="{% static 'accounts/css/style2.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <div class="parent">
-        <header class="frame-child">
-            <div class="logo-container">
-                <div class="frame-item"></div>
-                <div class="rocket-science">Rocket Science</div>
-            </div>
-            <nav>
-                <a href="#" class="glavnaya">Главная</a>
-                <a href="#" class="Onas">О нас</a>
-                <a href="#" class="obsvyas">Обратная связь</a>
-                <a href="#" class="profile">Профиль</a>
-            </nav>
-        </header>
-        
-        <main class="frame-inner">
+    <!-- Основной фон -->
+    <div class="background"></div>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <button class="logo-button">
+                <div class="logo-circle"></div>
+            </button>
+            <span>Rocket Science</span>
+        </div>
+        <nav class="nav">
+            <a href="#" class="nav-item">Главная</a>
+            <a href="#" class="nav-item">О нас</a>
+            <a href="#" class="nav-item">Обратная связь</a>
+            <a href="#" class="nav-item">Профиль</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="auth-button">Вход</button>
+            <button class="auth-button">Регистрация</button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="frame-inner">
             <h1 class="BigLogin">Вход</h1>
+            <div class="icons">
+                <img class="icon" alt="GitHub" src="{% static 'accounts/img/logo-github.svg' %}">
+                <img class="icon" alt="Chrome" src="{% static 'accounts/img/logo-chrome.svg' %}">
+                <img class="icon" alt="Google" src="{% static 'accounts/img/logo-google.svg' %}">
+            </div>
             <form action="login" method="post">
-                {% csrf_token %}
-                <input type="text" class="TextboxNumEm" name="username" placeholder="Введите номер телефона или почту" required>
-                <input type="password" class="Textboxpasswod" name="password" placeholder="Введите пароль" required>
+                 {% csrf_token %}
+                <label class="label" for="username">Номер телефона или почта</label>
+                <input type="text" id="username" class="input" name="username" placeholder="Введите номер телефона или почту" required>
+
+                <label class="label" for="password">Пароль</label>
+                <input type="password" id="password" class="input" name="password" placeholder="Введите пароль" required>
+
+                <a href="#" class="forgotpassword">Забыли пароль?</a>
                 <button type="submit" class="button">Вход</button>
             </form>
-            <div class="forgotpassword">Забыли пароль?</div>
+        </div>
+    </main>
 
-            
-            <div class="social-icons">
-                <img src="{% static 'accounts/img/logo-github.svg' %}" alt="GitHub" class="icon-ionicons-logos-loggit">
-                <img src="{% static 'accounts/img/logo-chrome.svg' %}" alt="Chrome" class="icon-ionicons-logos-logchrome">
-                <img src="{% static 'accounts/img/logo-google.svg' %}" alt="Google" class="icon-ionicons-logos-loggoogle">
-            </div>
-        </main>
+    <!-- Модальное окно с видео -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="modalVideo" controls>
+                <source src="{% static 'accounts/css/Пробник.mp4' %}" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
     </div>
 
+    <!-- Футер -->
     <footer class="footer">
-        <div class="footer-section">
+        <div class="footer-left">
             <div class="footer-logo">
                 <div class="logo-circle"></div>
                 <p class="footer-title">Rocket Science</p>
             </div>
-            <p class="footer-description">Размещаем статьи и другие научные ресурсы</p>
         </div>
-        <div class="footer-section">
-            <p>Контакты: +7 779 523 18 44 <br> +7 779 523 18 43</p>
-            <p>Почта: support@gmail.com <br> support1@gmail.com</p>
+        <div class="footer-center">
+            <p class="footer-contacts">Контакты: +7 779 523 18 44<br>+7 779 523 18 43</p>
+            <p class="footer-email">Почта: support@gmail.com<br>support1@gmail.com</p>
         </div>
-        <div class="footer-rights">
-            © 2024 RocketScience.com
-        </div>
+        <div class="footer-right">© 2024 RocketScience.com</div>
     </footer>
+
+    <script>
+        // Получаем элементы
+        const logoButton = document.querySelector('.logo-button');
+        const videoModal = document.getElementById('videoModal');
+        const closeModal = document.querySelector('.close-modal');
+        const modalVideo = document.getElementById('modalVideo');
+
+        // Открытие модального окна
+        logoButton.addEventListener('click', () => {
+            videoModal.style.display = 'flex';
+            modalVideo.play(); // Запуск видео
+        });
+
+        // Закрытие модального окна
+        closeModal.addEventListener('click', () => {
+            videoModal.style.display = 'none';
+            modalVideo.pause(); // Остановка видео
+            modalVideo.currentTime = 0; // Сброс времени
+        });
+
+        // Закрытие модального окна при клике вне видео
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                videoModal.style.display = 'none';
+                modalVideo.pause();
+                modalVideo.currentTime = 0;
+            }
+        });
+    </script>
 </body>
-</html> 
+</html>

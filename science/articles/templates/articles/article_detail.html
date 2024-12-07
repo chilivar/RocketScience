@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ article.title }}</h1>
+<p>{{ article.content }}</p>
+<p>Создано: {{ article.created_at }}</p>
+<p>Обновлено: {{ article.updated_at }}</p>
+<a href="{% url 'articles:article_list' %}">Назад к списку</a>
+<a href="{% url 'articles:delete_article' article.pk %}">Удалить статью</a>
+
+</body>
+</html>

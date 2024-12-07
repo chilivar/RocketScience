@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="stylesheet" href="../Css/stylesreg.css"> 
-        <link rel="stylesheet" href="../Css/mobiversiyareg.css" media="screen and (max-width: 768px)">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
-        <title>Регистрация</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Science - Вход</title>
+    <link rel="stylesheet" href="../Css/styleAvtoriz.css">
+    <link rel="stylesheet" href="../Css/mobileAvtoriz.css" media="screen and (max-width: 767px)">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
 <body>
     <!-- Основной фон -->
     <div class="background"></div>
@@ -33,30 +33,29 @@
         </div>
     </header>
 
-    <div class="registration-container">
-        <div class="registration-form">
-            <h2>Регистрация</h2>
-            <form action="/submit_registration" method="post">
-                <div class="form-row">
-                    <label for="first-name">Имя</label>
-                    <input type="text" id="first-name" name="first_name" required>
-                    <label for="last-name">Фамилия</label>
-                    <input type="text" id="last-name" name="last_name" required>
-                </div>
-                <label for="email">Почта</label>
-                <input type="email" id="email" name="email" required>
-                <label for="username">Псевдоним</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Пароль</label>
-                <input type="password" id="password" name="password" required>
-                <label for="confirm-password">Повторите пароль</label>
-                <input type="password" id="confirm-password" name="confirm_password" required>
-                <button type="submit" class="register-button">Регистрация</button>
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="frame-inner">
+            <h1 class="BigLogin">Вход</h1>
+            <div class="icons">
+                <img class="icon" alt="GitHub" src="logo-github.svg">
+                <img class="icon" alt="Chrome" src="logo-chrome.svg">
+                <img class="icon" alt="Google" src="logo-google.svg">
+            </div>
+            <form action="/login" method="post">
+                <label class="label" for="username">Номер телефона или почта</label>
+                <input type="text" id="username" class="input" name="username" placeholder="Введите номер телефона или почту" required>
+
+                <label class="label" for="password">Пароль</label>
+                <input type="password" id="password" class="input" name="password" placeholder="Введите пароль" required>
+
+                <a href="#" class="forgotpassword">Забыли пароль?</a>
+                <button type="submit" class="button">Вход</button>
             </form>
         </div>
-    </div>
+    </main>
 
-         <!-- Модальное окно для логотипа -->
+    <!-- Модальное окно для логотипа -->
     <div id="videoModal" class="video-modal">
         <div class="video-modal-content">
             <span class="close-modal">&times;</span>

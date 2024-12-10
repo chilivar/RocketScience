@@ -1,77 +1,135 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Science - Вход</title>
     {% block css %}{% endblock %}
-    <link rel="stylesheet"  href="{% static 'main/css/global.css' %} " />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+    <link rel="stylesheet"  href="{% static 'accounts/css/global.css' %} " />
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="page">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="logo"></div>
-            <div class="rocket-science-txt">Rocket Science</div>
-            <nav class="nav">
-                <a href="{% url 'index' %}"><div class="main-txt">Главная</div></a>
-                <a href="{% url 'about' %}"><div class="about-us-txt">О нас</div></a>
-                <a href="{% url 'feedback' %}"><div class="feedback-txt">Обратная связь</div></a>
-                <div class="profile-txt">Профиль</div>
-            </nav>
-            <div class="button-container1">
-                 <button class="sign-in-button">
-                    <a href="{% url 'login' %}"><span>Вход</span></a>
-                </button>
-                <button class="log-in-button">
-                    <a href="{% url 'register' %}"><span>Регистрация</span></a>
-                </button>
-            </div>
-        </header>
-        <!-- Main Content Section -->
-        {% block content %}
-        {% endblock %}
-        <!-- Footer Section -->
-        <footer class="footer">
-            <div style="display: flex; align-items: center;">
-                <div>
-                    <div class="logo-icon"></div>
-                    <div class="rocket-science-txt">Rocket Science</div>
-                    <div class="description-txt">Размещаем статьи и другие научные ресурсы</div>
-                </div>
-                <div class="contact-support">
-                    <div class="contacts">
-                        <p>Контакты:</p>
-                        <p>+7 776 523 18 44</p>
-                        <p>+7 776 523 18 43</p>
-                    </div>
-                    <div class="supportgmail">
-                        <p>Почта:</p>
-                        <p>support@gmail.com</p>
-                        <p>support1@gmail.com</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Основной фон -->
+    <div class="background"></div>
 
-            <div class="icons-container">
-                <a href="https://example.com/git" target="_blank">
-                    <img class="group-icon" alt="Git" src="{% static 'main/img/Group.svg' %}">
-                </a>
-                <a href="https://example.com/twitter" target="_blank">
-                    <img class="vector-icon" alt="Twitter" src="{% static 'main/img/Vector.svg' %}">
-                </a>
-                <a href="https://example.com/linkedin" target="_blank">
-                    <img class="vector-icon1" alt="LinkedIn" src="{% static 'main/img/Vector1.svg' %}">
-                </a>
-                <a href="https://example.com/instagram" target="_blank">
-                    <img class="vector-icon2" alt="Instagram" src="{% static 'main/img/Vector2.svg' %}">
-                </a>
-            </div>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <button class="logo-button">
+                <div class="logo-circle"></div>
+            </button>
+            <span>Rocket Science</span>
+        </div>
+        <nav class="nav">
+            <a href="{% url 'index' %}" class="nav-item">Главная</a>
+            <a href="{% url 'about' %}" class="nav-item">О нас</a>
+            <a href="{% url 'feedback' %}" class="nav-item">Обратная связь</a>
+            <a href="{% url 'profile' %}" class="nav-item">Профиль</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="auth-button"><a href="{% url 'login' %}">Вход</a></button>
+            <button class="auth-button"><a href="{% url 'register' %}">Регистрация</a></button>
+        </div>
+    </header>
 
-            <div class="rocketsciencecom">© 2024 RocketScience.com</div>
-        </footer>
+    <!-- Main Content Section -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Модальное окно для логотипа -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="modalVideo" controls>
+                <source src="{% static 'accounts/css/Пробник.mp4' %} " type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
     </div>
+
+    <!-- Модальное окно для случайного видео -->
+    <div id="randomVideoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="randomModalVideo" controls>
+                <source src="{% static 'accounts/css/Пробник.mp4' %}" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <div class="logo-circle"></div>
+                <p class="footer-title">Rocket Science</p>
+            </div>
+        </div>
+        <div class="footer-center">
+            <p class="footer-contacts">Контакты: +7 779 523 18 44<br>+7 779 523 18 43</p>
+            <p class="footer-email">Почта: support@gmail.com<br>support1@gmail.com</p>
+        </div>
+        <div class="footer-right">© 2024 RocketScience.com</div>
+    </footer>
+
+    <script>
+        // Логика для логотипа
+        const logoButton = document.querySelector('.logo-button');
+        const videoModal = document.getElementById('videoModal');
+        const closeModalLogo = videoModal.querySelector('.close-modal');
+        const modalVideo = document.getElementById('modalVideo');
+
+        // Логика для случайного видео
+        const allButtons = document.querySelectorAll('button');
+        const randomVideoModal = document.getElementById('randomVideoModal');
+        const closeModalRandom = randomVideoModal.querySelector('.close-modal');
+        const randomModalVideo = document.getElementById('randomModalVideo');
+
+        // Открытие видео для логотипа
+        logoButton.addEventListener('click', () => {
+            videoModal.style.display = 'flex';
+            modalVideo.play();
+        });
+
+        // Закрытие видео для логотипа
+        closeModalLogo.addEventListener('click', () => {
+            videoModal.style.display = 'none';
+            modalVideo.pause();
+            modalVideo.currentTime = 0;
+        });
+
+        // Логика случайного видео для остальных кнопок
+        allButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const randomChance = Math.floor(Math.random() * 5) + 1; // 20% вероятность
+                if (randomChance === 1) {
+                    randomVideoModal.style.display = 'flex';
+                    randomModalVideo.play();
+                }
+            });
+        });
+
+        // Закрытие случайного видео
+        closeModalRandom.addEventListener('click', () => {
+            randomVideoModal.style.display = 'none';
+            randomModalVideo.pause();
+            randomModalVideo.currentTime = 0;
+        });
+
+        // Закрытие при клике вне видео
+        [videoModal, randomVideoModal].forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    const video = modal.querySelector('video');
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -29,8 +29,8 @@
             <a href="{% url 'profile' %}" class="nav-item">Профиль</a>
         </nav>
         <div class="auth-buttons">
-            <button class="auth-button"><a href="{% url 'login' %}">Вход</a></button>
-            <button class="auth-button"><a href="{% url 'register' %}">Регистрация</a></button>
+            <a href="{% url 'login' %}"><button class="auth-button">Вход</button></a>
+            <a href="{% url 'register' %}"><button class="auth-button">Регистрация</button></a>
         </div>
     </header>
 

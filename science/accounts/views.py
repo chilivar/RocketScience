@@ -5,6 +5,8 @@ from django.contrib.auth.models import User, auth
 from django.shortcuts import redirect
 from django.contrib.auth import logout
 
+from articles.models import Article
+
 
 def logout_user(request):
     logout(request)  # Выход пользователя
@@ -58,5 +60,6 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'accounts/profile.html', {'user': request.user})
+    user_articles = Article.objects.filter(author=request.user).order_by('-created_at')  # Получаем статьи текущего пользователя
+    return render(request, 'accounts/profile.html', {'user_articles': user_articles})
     

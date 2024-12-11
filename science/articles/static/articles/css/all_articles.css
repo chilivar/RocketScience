@@ -1,0 +1,113 @@
+.articles-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.articles-header {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.articles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.article-item {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-item:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-title {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-title:hover {
+    text-decoration: underline;
+}
+
+.article-date {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.no-articles {
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+    margin: 20px 0;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+.add-article-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.add-article-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-article-button:hover {
+    background-color: #218838;
+}

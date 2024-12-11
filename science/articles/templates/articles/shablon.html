@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rocket Science - Вход</title>
     {% block css %}{% endblock %}
     <link rel="stylesheet"  href="{% static 'accounts/css/global.css' %} " />
     <script src="{% static 'accounts/Js/globaljs.js' %} "></script>
@@ -37,7 +36,7 @@
         <a href="{% url 'login' %}" class="auth-button">Вход</a>
         <a href="{% url 'register' %}" class="auth-button">Регистрация</a>
     {% endif %}
-
+             
         </div>
     </header>
 
@@ -112,6 +111,6 @@
 </script>
 <script src="{% static 'accounts/js/main.js' %}" defer></script>
 
-
+   
 </body>
 </html>

@@ -99,3 +99,46 @@
   }
 
 
+.my-articles-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.articles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.article-item {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-item:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-title {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-title:hover {
+    text-decoration: underline;
+}
+
+.article-date {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}

@@ -29,12 +29,20 @@
     </div>
   </div>
 
-
-
- <!-- Секция с постами и отзывами -->
- <div class="posts-section2">
-  <h2>Отзывы (<span id="postCount">0</span>)</h2>
-  <h2>Посты (<span id="postCount">0</span>)</h2>
-  <div class="postsContainer"></div>
+<div class="my-articles-section">
+    <h2>Мои статьи</h2>
+    {% if user_articles %}
+        <ul class="articles-list">
+            {% for article in user_articles %}
+                <li class="article-item">
+                    <a href="{% url 'articles:article_detail' article.pk %}" class="article-title">{{ article.title }}</a>
+                    <p class="article-date">Создано: {{ article.created_at|date:"d.m.Y H:i" }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>У вас пока нет опубликованных статей.</p>
+    {% endif %}
 </div>
+
 {% endblock %}

@@ -1,233 +1,113 @@
-
-/* Main Section */
-.feedback-icon {
-    position: absolute;
-    top: 205px;
-    left: 210px;
-    border-radius: 20px;
-    background-color: #1e1e1e;
-    width: 457px;
-    height: 126px;
-}
-.feedback1-txt {
-    position: absolute;
-    top: 250px;
-    left: 230px;
-    font-size: 30px;
-    color: #fff;
-    display: inline-block;
-    text-align: center;
-    width: 423px;
-    height: 97px;
-}
-.feedback-main-icon {
-
-    margin-top: 284px;
-    margin-left: 190px;
-    border-radius: 20px;
-    background-color: #1e1e1e;
-    width: 1472px;
-    height: 1300px;
-}
-
-/* Контейнер1 */
-.msg-theme-container {
-    position: absolute;
-    top: 410px;
-    left: 243px;
-    width: 1386px;
-    height: 80px;
+/* Основной контейнер */
+.feedback-container {
     display: flex;
-    align-items: center;
-    border-radius: 20px;
-    background-image: url("../img/Rectangle fd1.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0  ;
-}
-
-/* Поле ввода */
-.msg-theme-input {
-    flex: 1;
-    height: 80%;
-    border: none;
-    border-radius: 20px;
-    font-size: 20px;
-    color: #fff;
-    background-color: transparent;
-    outline: none;
-    z-index: 2;
-    padding-left: 40px;
-}
-
-/* Стиль текста-заполнителя */
-.msg-theme-input::placeholder {
-    color: #b5b5b5;
-    font-size: 20px;
-}
-
-/* Контейнер2 */
-.msg-title-container {
-    position: absolute;
-    top: 560px;
-    left: 243px;
-    width: 1386px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    background-image: url("../img/Rectangle fd2.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0  ;
-}
-
-/* Поле ввода */
-.msg-title-input {
-    flex: 1;
-    height: 80%;
-    border: none;
-    border-radius: 20px;
-    font-size: 20px;
-    color: #fff;
-    background-color: transparent;
-    outline: none;
-    z-index: 2;
-    padding-left: 40px;
-}
-
-/* Стиль текста-заполнителя */
-.msg-title-input::placeholder {
-    color: #b5b5b5;
-    font-size: 20px;
-}
-
-/* Контейнер3 */
-.msg-container {
-    position: absolute;
-    top: 720px;
-    left: 243px;
-    width: 1386px;
-    height: 500px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    border-radius: 20px;
-    background-image: url("../img/Rectangle fd3.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0  ;
-}
-
-/* Поле ввода */
-.msg-input {
-    position: relative;
-    top: 50px;
-    width: calc(100% - 40px); /* Учёт отступов */
-    height: 890px;
-    border: none;
-    border-radius: 20px;
-    font-size: 20px;
-    color: #fff;
-    background-color: transparent;
-    outline: none;
-    z-index: 2;
-    padding-left: 40px;
-    resize: none; /* Убираем возможность изменения размера */
-    padding: 10px 40px 10px 40px; /* Отступы внутри поля */
-    line-height: 1.5; /* Интервал между строками */
-}
-
-/* Стиль текста-заполнителя */
-.msg-input::placeholder {
-    color: #b5b5b5;
-    font-size: 20px;
-}
-
-/* Контейнер4 */
-.mail-container {
-    position: absolute;
-    top: 1300px;
-    left: 243px;
-    width: 1386px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    background-image: url("../img/Rectangle fd4.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0  ;
-}
-
-/* Поле ввода */
-.mail-input {
-    flex: 1;
-    height: 80%;
-    border: none;
-    border-radius: 20px;
-    font-size: 20px;
-    color: #fff;
-    background-color: transparent;
-    outline: none;
-    z-index: 2;
-    padding-left: 40px;
-}
-
-/* Стиль текста-заполнителя */
-.mail-input::placeholder {
-    color: #b5b5b5;
-    font-size: 20px;
-}
-
-/* Контейнер для кнопок в основной части */
-.main-content {
-    display: flex;
-    gap: 10px;
-}
-
-/* Стиль кнопок в основной части */
-.main-content button {
-    position: absolute;
-    border-radius: 20px;
-    width: 420px;
-    height: 90px;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: 70vh; /* Высота страницы */
+    background-color: #3c3838;
+}
+
+/* Форма обратной связи */
+.feedback-form {
+    background-color: #1e1e1e;
+    border-radius: 20px; /* Закругленные углы */
+    padding: 30px 20px;
+    width: 700px; /* Ширина формы */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Тень для мягкости */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Расстояние между элементами */
+}
+
+/* Заголовок формы */
+.form-title {
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+}
+
+/* Текстовые поля */
+.form-input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 10px; /* Закругленные углы */
+    background-color: #2c2c2c;
+    color: white;
+    width: 100%;
+    box-sizing: border-box; /* Включаем паддинги в ширину */
+}
+
+.form-input::placeholder {
+    color: #aaa; /* Цвет текста внутри placeholder */
+}
+
+/* Поле ввода сообщения */
+.form-textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background-color: #2c2c2c;
+    color: white;
+    width: 100%;
+    height: 120px; /* Высота текстового поля */
+    resize: none; /* Запрещаем изменение размера */
+    box-sizing: border-box
+}
+
+.form-textarea::placeholder {
+    color: #aaa;
+}
+
+/* Кнопки */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
     gap: 10px;
+}
+
+.form-button {
     padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
     border: none;
-    background-color: #2d2d2d;
-    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    flex: 1; /* Обеспечиваем равномерное распределение кнопок */
 }
 
-.main-content button:hover {
+.send-button {
+    background-color: #3CAAB1;
+    color: white;
+}
+
+.send-button:hover {
+    background-color: #2c8b92;
+}
+
+.clear-button {
     background-color: #444;
+    color: white;
 }
 
-/* Кнопка "Отправить" */
-.main-content .send-button {
-    top: 1450px;
-    left: 243px;
+.clear-button:hover {
+    background-color: #666;
 }
 
-/* Кнопка "Очистить" */
-.main-content .clear-button {
-    top: 1450px;
-    left: 752px;
-}
+/* Адаптивность */
+@media (max-width: 768px) {
+    .feedback-form {
+        width: 90%; /* Увеличиваем ширину на мобильных */
+    }
 
+    .form-title {
+        font-size: 1.5rem;
+    }
 
-
-/* Цвет текста на кнопках */
-.main-content button span {
-    font-size: 20px;
-    font-weight: bold;
+    .form-button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 }

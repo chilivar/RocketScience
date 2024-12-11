@@ -1,0 +1,36 @@
+.access-denied-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.access-denied-header {
+    color: #dc3545;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.access-denied-text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

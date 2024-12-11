@@ -1,17 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Добавить статью</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Сохранить</button>
-</form>
-<a href="{% url 'articles:article_list' %}">Назад к списку</a>
+{% extends 'articles/Shablon.html' %}
+{% load static %}
+{% block css %}
+<title>Публикация статьи</title>
+<link rel="stylesheet" href="{% static 'articles/css/stylearticles.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="article-container">
+        <div class="articleForm">
+            <h2>Публикация статьи</h2>
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            <form method="post">
+                {% csrf_token %}
+                <label for="article-title">Заголовок статьи</label>
+                <input type="text" id="article-title" name="title" placeholder="Введите заголовок статьи" required>
 
-</body>
-</html>
+                <label for="article-content">Текст статьи</label>
+                <textarea id="article-content" name="content" rows="10" placeholder="Введите текст статьи" required></textarea>
+
+                <button type="submit" class="publish-button">Опубликовать</button>
+            </form>
+            <a href="{% url 'articles:article_list' %}">Назад к списку</a>
+        </div>
+    </div>
+<!-- Предпросмотр статьи -->
+        <div id="articlePreview" class="article-preview">
+            <h2>Предпросмотр статьи</h2>
+            <h3 id="preview-title"></h3>
+            <p id="preview-content"></p>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+

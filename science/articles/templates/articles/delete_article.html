@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Удалить статью</h1>
-<p>Вы уверены, что хотите удалить статью "{{ article.title }}"?</p>
-<form method="post">
-    {% csrf_token %}
-    <button type="submit">Да, удалить</button>
-</form>
-<a href="{% url 'articles:article_list' %}">Отмена</a>
+{% extends 'articles/Shablon.html' %}
+{% load static %}
+{% block css %}
+<title>Публикация статьи</title>
+<link rel="stylesheet" href="{% static 'articles/css/delete.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="delete-container">
+    <h1 class="delete-header">Удаление статьи</h1>
+    <p class="delete-text">Вы уверены, что хотите удалить статью <strong>"{{ article.title }}"</strong>?</p>
+    <form method="post" class="delete-form">
+        {% csrf_token %}
+        <button type="submit" class="delete-button">Да, удалить</button>
+        <a href="{% url 'articles:article_list' %}" class="cancel-button">Отмена</a>
+    </form>
+</div>
 
-</body>
-</html>
+{% endblock %}
+
+
+
+

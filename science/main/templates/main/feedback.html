@@ -4,52 +4,17 @@
 
 
 {% block content %}
-<main class="content">
-			<div class="feedback-icon"></div>
-			<b class="feedback1-txt">Обратная связь</b>
-			<div class="feedback-main-icon"></div>
-
-			<div class="msg-theme-container">
-				<input
-                    type="text"
-                    class="msg-theme-input"
-                    placeholder="Тема письма"
-                >
-			</div>
-
-
-			<div class="msg-title-container">
-				<input
-                    type="text"
-                    class="msg-title-input"
-                    placeholder="Заголовок сообщения"
-                >
-			</div>
-
-
-			<div class="msg-container">
-				<textarea
-                    type="text"
-                    class="msg-input"
-                    placeholder="Текст сообщения"
-                ></textarea>
-			</div>
-
-
-			<div class="mail-container">
-				<input
-                    type="text"
-                    class="mail-input"
-                    placeholder="Почта для обратной связи"
-                >
-			</div>
-			<div class="main-content">
-				<button class="send-button">
-				   <span>Отправить</span>
-			   </button>
-			   <button class="clear-button">
-				   <span>Очистить</span>
-			   </button>
-		   </div>
-		</main>
+<!-- Основной контент -->
+    <main class="feedback-container">
+        <div class="feedback-form">
+            <h2 class="form-title">Обратная связь</h2>
+            <input type="text" class="form-input" placeholder="Заголовок сообщения" />
+            <input type="text" class="form-input" placeholder="Тема сообщения" />
+            <textarea class="form-textarea" placeholder="Сообщение"></textarea>
+            <div class="form-buttons">
+                <button class="form-button send-button">Отправить</button>
+                <button class="form-button clear-button">Очистить</button>
+            </div>
+        </div>
+    </main>
 {% endblock %}

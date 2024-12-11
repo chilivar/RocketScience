@@ -1,0 +1,17 @@
+{% extends 'articles/Shablon.html' %}
+{% load static %}
+{% block css %}
+<title>Публикация статьи</title>
+<link rel="stylesheet" href="{% static 'articles/css/access_denied.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="access-denied-container">
+        <h1 class="access-denied-header">Доступ запрещен</h1>
+        <p class="access-denied-text">У вас нет прав для выполнения этого действия.</p>
+        <a href="{% url 'articles:article_list' %}" class="back-button">Вернуться к списку статей</a>
+    </div>
+{% endblock %}
+
+
+
+

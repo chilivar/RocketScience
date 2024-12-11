@@ -37,3 +37,12 @@ class Like(models.Model):
 
     def __str__(self):
         return f'{self.user.username} лайкнул {self.article.title}'
+
+class Report(models.Model):
+    article = models.ForeignKey('Article', on_delete=models.CASCADE, related_name='reports')  # Статья, на которую подали жалобу
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reports')  # Пользователь, подавший жалобу
+    reason = models.TextField()  # Причина жалобы
+    created_at = models.DateTimeField(auto_now_add=True)  # Дата подачи жалобы
+
+    def __str__(self):
+        return f'Жалоба от {self.user.username} на статью "{self.article.title}"'

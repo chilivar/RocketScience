@@ -31,7 +31,18 @@
     </form>
     <p>Лайков: {{ article.likes.count }}</p>
 </div>
-
+<div class="report-section">
+    <h3>Пожаловаться на статью</h3>
+    {% if request.user.is_authenticated %}
+        <form method="post" class="report-form">
+            {% csrf_token %}
+            {{ report_form.as_p }}
+            <button type="submit" name="report_submit" class="report-button">Отправить жалобу</button>
+        </form>
+    {% else %}
+        <p>Вы должны <a href="{% url 'login' %}">войти</a>, чтобы пожаловаться на статью.</p>
+    {% endif %}
+</div>
 <div class="comments-container">
     <h2>Комментарии</h2>
 

@@ -1,6 +1,18 @@
 from django import forms
 from .models import Article
+from .models import Report
 
+class ReportForm(forms.ModelForm):
+    class Meta:
+        model = Report
+        fields = ['reason']
+        widgets = {
+            'reason': forms.Textarea(attrs={
+                'class': 'form-control',
+                'placeholder': 'Опишите причину жалобы...',
+                'rows': 3,
+            }),
+        }
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article

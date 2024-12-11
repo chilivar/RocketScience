@@ -3,7 +3,7 @@ from django.db.models import Q
 from django.http import HttpResponseForbidden
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Article, Comment, Like
-from .forms import ArticleForm, CommentForm
+from .forms import ArticleForm, CommentForm, ReportForm
 from django.urls import reverse
 
 def article_list(request):
@@ -20,29 +20,40 @@ def article_list(request):
     return render(request, 'articles/all_articles.html', {'articles': articles, 'query': query})
 def article_detail(request, pk):
     article = get_object_or_404(Article, pk=pk)
-    comments = article.comments.all()  # Получаем все комментарии к статье
+    comments = article.comments.all()
     form = CommentForm()
+    report_form = ReportForm()  # Форма для жалобы
 
-    # Проверяем, лайкнул ли пользователь статью
     is_liked = False
     if request.user.is_authenticated:
         is_liked = article.likes.filter(user=request.user).exists()
 
     if request.method == 'POST':
-        # Если форма отправлена (комментарий)
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.article = article
-            comment.author = request.user  # Связываем комментарий с автором
-            comment.save()
-            return redirect('articles:article_detail', pk=article.pk)
+        if 'comment_submit' in request.POST:
+            # Обработка комментариев
+            form = CommentForm(request.POST)
+            if form.is_valid():
+                comment = form.save(commit=False)
+                comment.article = article
+                comment.author = request.user
+                comment.save()
+                return redirect('articles:article_detail', pk=article.pk)
+        elif 'report_submit' in request.POST:
+            # Обработка жалоб
+            report_form = ReportForm(request.POST)
+            if report_form.is_valid():
+                report = report_form.save(commit=False)
+                report.article = article
+                report.user = request.user
+                report.save()
+                return redirect('articles:article_detail', pk=article.pk)
 
     return render(request, 'articles/article_detail.html', {
         'article': article,
         'comments': comments,
         'form': form,
-        'is_liked': is_liked,  # Передаём информацию о лайке
+        'report_form': report_form,
+        'is_liked': is_liked,
     })
 
 

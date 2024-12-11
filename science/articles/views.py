@@ -20,7 +20,7 @@ def article_list(request):
     return render(request, 'articles/all_articles.html', {'articles': articles, 'query': query})
 def article_detail(request, pk):
     article = get_object_or_404(Article, pk=pk)
-    comments = article.comments.all()
+    comments = article.comments.all()  # Получаем все комментарии к статье
     form = CommentForm()
     report_form = ReportForm()  # Форма для жалобы
 
@@ -48,6 +48,7 @@ def article_detail(request, pk):
                 report.save()
                 return redirect('articles:article_detail', pk=article.pk)
 
+    # Передаём формы и данные комментариев обратно в шаблон
     return render(request, 'articles/article_detail.html', {
         'article': article,
         'comments': comments,
@@ -55,6 +56,8 @@ def article_detail(request, pk):
         'report_form': report_form,
         'is_liked': is_liked,
     })
+
+
 
 
 @login_required

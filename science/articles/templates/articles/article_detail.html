@@ -18,8 +18,7 @@
             <a href="{% url 'articles:delete_article' article.pk %}" class="delete-button">Удалить</a>
         {% endif %}
     </div>
-</div>
-<div class="like-section">
+    <div class="like-section">
     <form method="post" action="{% url 'articles:toggle_like' article.id %}">
         {% csrf_token %}
         <button type="submit" class="like-button">
@@ -32,52 +31,71 @@
     </form>
     <p>Лайков: {{ article.likes.count }}</p>
 </div>
-<div class="report-section">
-    <h3>Пожаловаться на статью</h3>
-    {% if request.user.is_authenticated %}
-        <form method="post" class="report-form">
-            {% csrf_token %}
-            {{ report_form.as_p }}
-            <button type="submit" name="report_submit" class="report-button">Отправить жалобу</button>
-        </form>
-    {% else %}
-        <p>Вы должны <a href="{% url 'login' %}">войти</a>, чтобы пожаловаться на статью.</p>
-    {% endif %}
-</div>
-<div class="comments-container">
-    <h2>Комментарии</h2>
-
+<!-- Кнопка для жалобы -->
+<button class="report-button" onclick="openModal()">Пожаловаться</button>
+    <div class="comments-container">
+    <h3>Комментарии</h3>
     {% if comments %}
-        <ul class="comments-list">
+        <ul>
             {% for comment in comments %}
-                <li class="comment-item">
-                    <p class="comment-author"><strong>{{ comment.author.username }}</strong>:</p>
-                    <p class="comment-content">{{ comment.content }}</p>
+                <li>
+                    <p><strong>{{ comment.author.username }}</strong>: {{ comment.content }}</p>
                     <p class="comment-date">{{ comment.created_at|date:"d.m.Y H:i" }}</p>
-                    {% if request.user == comment.author %}
-                <form method="post" action="{% url 'articles:delete_comment' comment.pk %}" class="delete-comment-form">
-                    {% csrf_token %}
-                    <button type="submit" class="delete-comment-button">Удалить</button>
-                </form>
-            {% endif %}
                 </li>
             {% endfor %}
         </ul>
     {% else %}
-        <p>Комментариев пока нет. Будьте первым!</p>
+        <p>Комментариев пока нет. Оставьте первый!</p>
     {% endif %}
 
     {% if request.user.is_authenticated %}
-        <h3>Добавить комментарий</h3>
-        <form method="post" class="comment-form">
+        <h4>Добавить комментарий</h4>
+        <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="submit-comment-button">Добавить</button>
+            <button type="submit" name="comment_submit">Отправить</button>
         </form>
     {% else %}
-        <p>Вы должны <a href="{% url 'login' %}">войти</a>, чтобы оставлять комментарии.</p>
+        <p>Вы должны <a href="{% url 'login' %}">войти</a>, чтобы оставить комментарий.</p>
     {% endif %}
 </div>
+
+</div>
+
+<script>
+    // Открыть модальное окно
+    function openModal() {
+        document.getElementById('reportModal').style.display = 'block';
+    }
+
+    // Закрыть модальное окно
+    function closeModal() {
+        document.getElementById('reportModal').style.display = 'none';
+    }
+
+    // Закрыть окно при клике вне его области
+    window.onclick = function(event) {
+        const modal = document.getElementById('reportModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+</div>
+
+<!-- Модальное окно -->
+<div id="reportModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2>Жалоба на статью</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ report_form.as_p }}
+            <button type="submit" name="report_submit" class="submit-report-button">Отправить жалобу</button>
+        </form>
+    </div>
+</div>
+
 {% endblock %}
 
 

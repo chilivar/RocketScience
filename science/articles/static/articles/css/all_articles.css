@@ -2,14 +2,14 @@
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background: #fff;
+    background: #333232;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .articles-header {
     font-size: 28px;
-    color: #333;
+    color: #fff;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -25,18 +25,18 @@
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background: #f9f9f9;
+    background: #cecccc;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .article-item:hover {
-    background-color: #f1f1f1;
+    background-color: #bcbcbc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .article-title {
     font-size: 18px;
-    color: #007bff;
+    color: #404141;
     text-decoration: none;
     font-weight: bold;
 }
@@ -47,7 +47,7 @@
 
 .article-date {
     font-size: 14px;
-    color: #666;
+    color: #4c4c4c;
     margin-top: 5px;
 }
 
@@ -73,13 +73,13 @@
 .search-input {
     width: 300px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #383838;
     border-radius: 4px;
     font-size: 14px;
 }
 
 .search-button {
-    background-color: #007bff;
+    background-color: #1da8b8;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -90,7 +90,7 @@
 }
 
 .search-button:hover {
-    background-color: #0056b3;
+    background-color: #31919b;
 }
 .add-article-container {
     text-align: center;
@@ -106,6 +106,7 @@
     border-radius: 4px;
     font-size: 16px;
     transition: background-color 0.3s ease;
+
 }
 
 .add-article-button:hover {

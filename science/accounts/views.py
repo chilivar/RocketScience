@@ -50,7 +50,8 @@ def register(request):
                 user =  User.objects.create_user(username = username, password = c_password, email=email, first_name = first_name, last_name= last_name)
                 user.save()
                 messages.info(request,'Пользователь успешно создан')
-                return redirect('login')
+                auth.login(request, user)
+                return redirect('profile')
         else:
             messages.info(request,'Пароли не совпадают!')
             return redirect('register')

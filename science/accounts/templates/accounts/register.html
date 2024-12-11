@@ -1,0 +1,35 @@
+{% extends 'accounts/Shablon.html' %}
+{% load static %}
+{% block css %}    <link rel="stylesheet" href="{% static 'accounts/css/stylesreg.css' %}">{% endblock %}
+
+    {% block content %}
+    <div class="registration-container">
+        <div class="registration-form">
+            <h2>Регистрация</h2>
+            <form action="register" method ="post">
+                {% csrf_token %}
+                <div class="form-row">
+                    <label for="first-name">Имя</label>
+                    <input type="text" id="first-name" name="first_name" required>
+                    <label for="last-name">Фамилия</label>
+                    <input type="text" name="last_name" placeholder="last name" required>
+                </div>
+                <label for="email">Почта</label>
+                <input type="email" name="email" placeholder="email" required>
+                <label for="username">Псевдоним</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Пароль</label>
+                <input type="password" name="password" placeholder="Password" required>
+                <label for="confirm-password">Повторите пароль</label>
+                <input type="password" name="c_password" placeholder="Confirm Password">
+                <input type="submit" name="submit" class="register-button">Регистрация</input>
+            </form>
+        </div>
+        </div>
+    {% endblock %}  
+        
+
+
+
+
+

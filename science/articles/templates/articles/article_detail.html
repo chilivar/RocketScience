@@ -1,0 +1,105 @@
+{% extends 'accounts/Shablon.html' %}
+{% load static %}
+{% block css %}
+<title>Редактирование статьи</title>
+<link rel="stylesheet" href="{% static 'articles/css/article.css' %}">
+{% endblock %}
+{% block content %}
+<div class="article-detail">
+    <h1>{{ article.title }}</h1>
+    <p class="article-author"><strong>Автор:</strong> {{ article.author.username }}</p>
+    <p>{{ article.content }}</p>
+    <p><strong>Создано:</strong> {{ article.created_at }}</p>
+    <p><strong>Обновлено:</strong> {{ article.updated_at }}</p>
+    <div class="action-buttons">
+        <a href="{% url 'articles:article_list' %}" class="back-button">Назад к списку</a>
+        {% if request.user == article.author %}
+            <a href="{% url 'articles:edit_article' article.pk %}" class="edit-button">Редактировать</a>
+            <a href="{% url 'articles:delete_article' article.pk %}" class="delete-button">Удалить</a>
+        {% endif %}
+    </div>
+    <div class="like-section">
+    <form method="post" action="{% url 'articles:toggle_like' article.id %}">
+        {% csrf_token %}
+        <button type="submit" class="like-button">
+            {% if is_liked %}
+                💔 Убрать лайк
+            {% else %}
+                ❤️ Лайк
+            {% endif %}
+        </button>
+    </form>
+    <p>Лайков: {{ article.likes.count }}</p>
+</div>
+<!-- Кнопка для жалобы -->
+<button class="report-button" onclick="openModal()">Пожаловаться</button>
+    <div class="comments-container">
+    <h3>Комментарии</h3>
+    {% if comments %}
+        <ul>
+            {% for comment in comments %}
+                <li>
+                    <p><strong>{{ comment.author.username }}</strong>: {{ comment.content }}</p>
+                    <p class="comment-date">{{ comment.created_at|date:"d.m.Y H:i" }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Комментариев пока нет. Оставьте первый!</p>
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+        <h4>Добавить комментарий</h4>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="comment_submit">Отправить</button>
+        </form>
+    {% else %}
+        <p>Вы должны <a href="{% url 'login' %}">войти</a>, чтобы оставить комментарий.</p>
+    {% endif %}
+</div>
+
+</div>
+
+<script>
+    // Открыть модальное окно
+    function openModal() {
+        document.getElementById('reportModal').style.display = 'block';
+    }
+
+    // Закрыть модальное окно
+    function closeModal() {
+        document.getElementById('reportModal').style.display = 'none';
+    }
+
+    // Закрыть окно при клике вне его области
+    window.onclick = function(event) {
+        const modal = document.getElementById('reportModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+</div>
+
+<!-- Модальное окно -->
+<div id="reportModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2>Жалоба на статью</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ report_form.as_p }}
+            <button type="submit" name="report_submit" class="submit-report-button">Отправить жалобу</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+

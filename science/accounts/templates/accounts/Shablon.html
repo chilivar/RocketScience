@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}{% endblock %}
+    <link rel="stylesheet"  href="{% static 'articles/css/global.css' %} " />
+    <script src="{% static 'accounts/Js/globaljs.js' %} "></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Основной фон -->
+    <div class="background"></div>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <button class="logo-button">
+                <div class="logo-circle"></div>
+            </button>
+            <span>Rocket Science</span>
+        </div>
+        <nav class="nav">
+            <a href="{% url 'articles:article_list' %}" class="nav-item">Главная</a>
+            <a href="{% url 'about' %}" class="nav-item">О нас</a>
+            <a href="{% url 'feedback' %}" class="nav-item">Обратная связь</a>
+            <a href="{% url 'profile' %}" class="nav-item">Профиль</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="auth-button" id="memesButton">Коты</button>
+                {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="auth-button">Выход</a>
+    {% else %}
+        <a href="{% url 'login' %}" class="auth-button">Вход</a>
+        <a href="{% url 'register' %}" class="auth-button">Регистрация</a>
+    {% endif %}
+             
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    {% block content %}
+    {% endblock %}
+
+
+        <div  id="memesModal" class="memes-modal">
+        <div class="memes-modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="" alt="Случайный мем" class="meme-display">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для логотипа -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="modalVideo" controls>
+                <source src="{% static 'accounts/css/Пробник.mp4' %} " type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+
+    <!-- Модальное окно для случайного видео -->
+    <div id="randomVideoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="randomModalVideo" controls>
+                <source src="{% static 'accounts/css/Пробник.mp4' %}" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <div class="logo-circle"></div>
+                <p class="footer-title">Rocket Science</p>
+            </div>
+        </div>
+        <div class="footer-center">
+            <p class="footer-contacts">Контакты: +7 779 523 18 44<br>+7 779 523 18 43</p>
+            <p class="footer-email">Почта: support@gmail.com<br>support1@gmail.com</p>
+        </div>
+        <div class="footer-right">© 2024 RocketScience.com</div>
+    </footer>
+
+<!-- Передача путей через JSON в скрытый элемент -->
+<script id="memes-data" type="application/json">
+    [
+        "{% static 'accounts/img/кот1.jpg' %}",
+        "{% static 'accounts/img/кот2.jpg' %}",
+        "{% static 'accounts/img/кот3.jpg' %}",
+        "{% static 'accounts/img/кот4.jpg' %}",
+        "{% static 'accounts/img/кот5.jpg' %}",
+        "{% static 'accounts/img/кот6.jpg' %}",
+        "{% static 'accounts/img/кот7.jpg' %}",
+        "{% static 'accounts/img/кот8.jpg' %}",
+        "{% static 'accounts/img/кот9.jpg' %}",
+        "{% static 'accounts/img/кот10.jpg' %}",
+        "{% static 'accounts/img/кот11.jpg' %}",
+        "{% static 'accounts/img/кот12.jpg' %}",
+        "{% static 'accounts/img/кот13.jpg' %}"
+    ]
+</script>
+<script src="{% static 'accounts/js/main.js' %}" defer></script>
+
+   
+</body>
+</html>

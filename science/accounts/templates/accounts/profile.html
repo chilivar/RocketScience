@@ -1,0 +1,48 @@
+
+
+{% extends 'accounts/Shablon.html' %}
+{% load static %}
+{% block css %}    <link rel="stylesheet" href="{% static 'accounts/css/profilePage.css' %}">
+{% endblock %}
+
+
+{% block content %}
+  <div class="profile-container">
+    <div class="profile-header">
+      <h1>Профиль пользователя</h1>
+    </div>
+    <div class="profile">
+      <div class="profile-photo">
+        <img src="https://via.placeholder.com/150" alt="Фото пользователя">
+      </div>
+      <div class="profile-info">
+        <h2>{{ user.username }}</h2>
+        <p><strong>Имя:</strong> {{ user.first_name }}</p>
+        <p><strong>Фамилия:</strong> {{ user.last_name }}</p>
+        <p><strong>Почта:</strong> {{ user.email }}</p>
+        <p><strong>Псевдоним:</strong> {{ user.username }}</p>
+      </div>
+    </div>
+    <div class="profile-actions">
+      <button class="btn">Редактировать профиль</button>
+      <button class="btn">Выход</button>
+    </div>
+  </div>
+
+<div class="my-articles-section">
+    <h2>Мои статьи</h2>
+    {% if user_articles %}
+        <ul class="articles-list">
+            {% for article in user_articles %}
+                <li class="article-item">
+                    <a href="{% url 'articles:article_detail' article.pk %}" class="article-title">{{ article.title }}</a>
+                    <p class="article-date">Создано: {{ article.created_at|date:"d.m.Y H:i" }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>У вас пока нет опубликованных статей.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

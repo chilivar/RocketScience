@@ -1,0 +1,26 @@
+.delete-comment-form {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.delete-comment-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-comment-button:hover {
+    background-color: #c82333;
+}
+
+blockquote.comment-content {
+    font-style: italic;
+    color: #555;
+    margin: 10px 0;
+    padding-left: 15px;
+    border-left: 3px solid #ddd;
+}

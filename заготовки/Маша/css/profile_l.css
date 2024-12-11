@@ -1,0 +1,140 @@
+
+/* Main Section */
+.main-page-icon {
+    position: absolute;
+    top: 184px;
+    left: 50px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    width: 1814px;
+    height: 2017px;
+}
+.line1 {
+    position: absolute;
+    top: 1068.5px;
+    left: 138.5px;
+    background-color: #2d2d2d;
+    border-top: 1px solid #2d2d2d;
+    box-sizing: border-box;
+    width: 510px;
+    height: 1px;
+}
+.line2 {
+    position: absolute;
+    top: 972.5px;
+    left: 138.5px;
+    background-color: #2d2d2d;
+    border-top: 1px solid #2d2d2d;
+    box-sizing: border-box;
+    width: 510px;
+    height: 1px;
+}
+.photo {
+    position: absolute;
+    top: 249px;
+    left: 191px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 5px solid #b5b5b5;
+    box-sizing: border-box;
+    width: 295px;
+    height: 295px;
+}
+.line3  {
+    position: absolute;
+    top: 875.5px;
+    left: 138.5px;
+    background-color: #2d2d2d;
+    border-top: 1px solid #2d2d2d;
+    box-sizing: border-box;
+    width: 510px;
+    height: 1px;
+}
+.p {
+    margin: 0;
+}
+.profite-info {
+    position: absolute;
+    top: 249px;
+    left: 740px;
+    font-size: 32px;
+    color: #2d2d2d;
+    display: inline-block;
+    width: 1055px;
+    height: 1918px;
+}
+.username {
+    position: absolute;
+    top: 580px;
+    left: 139px;
+    font-size: 32px;
+    display: flex;
+    color: #2d2d2d;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 399px;
+    height: 76px;
+}
+.articles-txt {
+    position: absolute;
+    top: 780px;
+    left: 139px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 254px;
+    height: 96px;
+}
+.zero1 {
+    position: absolute;
+    top: 780px;
+    left: 590px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 58px;
+    height: 97px;
+}
+.reviews-txt {
+    position: absolute;
+    top: 876px;
+    left: 139px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 254px;
+    height: 97px;
+}
+.zero2 {
+    position: absolute;
+    top: 876px;
+    left: 590px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 58px;
+    height: 97px;
+}
+.p-comments-txt {
+    position: absolute;
+    top: 973px;
+    left: 139px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 254px;
+    height: 96px;
+}
+.zero3 {
+    position: absolute;
+    top: 973px;
+    left: 590px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 58px;
+    height: 97px;
+}
+
+

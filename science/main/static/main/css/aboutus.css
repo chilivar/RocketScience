@@ -1,0 +1,77 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Верхний блок (ярлык) */
+.about-icon {
+    width: 300px; /* Ширина ярлыка */
+    height: 80px; /* Высота ярлыка */
+    background-color: #1e1e1e;
+    border-radius: 15px; /* Закругленные углы */
+    position: relative;
+    z-index: 2; /* Перекрывает основной блок */
+    margin-bottom: -15px; /* Перекрывает основной блок */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     left: -180px;
+}
+
+.about-txt {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+/* Основной блок (контейнер информации) */
+.info-icon {
+    width: 80%; /* Ширина основного блока */
+    max-width: 650px;
+    height: 500px;
+    background-color: #1e1e1e;
+    border-radius: 20px; /* Закругленные углы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.info-icon2 {
+    width: 100%; /* Ширина основного блока */
+    max-width: 650px;
+    height: 490px;
+    background-color: #2b2a2a;
+    border-radius: 20px; /* Закругленные углы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.info-txt {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .about-icon {
+        width: 250px; /* Уменьшение ширины ярлыка */
+        height: 80px;
+    }
+
+    .about-txt {
+        font-size: 1.2rem;
+    }
+
+    .info-icon {
+        width: 90%; /* Увеличиваем ширину для мобильных */
+        height: 400px;
+    }
+
+    .info-txt {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,28 @@
+{% extends 'accounts/Shablon.html' %}
+{% load static %}
+{% block css %}
+<title>Публикация статьи</title>
+<link rel="stylesheet" href="{% static 'articles/css/styleredactor.css' %}">
+{% endblock %}
+{% block content %}
+    <main class="article-container">
+    <div class="edit-form-container">
+        <h2>Редактирование статьи</h2>
+        <form method="post" id="editArticleForm" class="edit-form">
+            {% csrf_token %}
+            <label for="article-title">Заголовок статьи:</label>
+            <input type="text" id="article-title" name="title" placeholder="Введите заголовок статьи" value="{{ article.title }}" required>
+
+            <label for="article-content">Содержание статьи:</label>
+            <textarea id="article-content" name="content" rows="10" placeholder="Введите текст статьи" required>{{ article.content }}</textarea>
+
+            <button type="submit" class="publish-button">Сохранить</button>
+        </form>
+    </div>
+</main>
+
+{% endblock %}
+
+
+
+

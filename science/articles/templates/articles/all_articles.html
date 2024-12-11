@@ -1,0 +1,38 @@
+{% extends 'accounts/Shablon.html' %}
+{% load static %}
+{% block css %}  <link rel="stylesheet" href="{% static 'articles/css/all_articles.css' %}">
+  {% endblock %}
+{% block content %}
+    <div class="search-container">
+    <form method="get" action="{% url 'articles:article_list' %}" class="search-form">
+        <input type="text" name="q" value="{{ query }}" placeholder="Искать статьи..." class="search-input">
+        <button type="submit" class="search-button">Поиск</button>
+    </form>
+</div>
+
+{% if query %}
+    <p class="search-results">Результаты поиска для: "{{ query }}"</p>
+{% endif %}
+
+<div class="articles-container">
+    <h1 class="articles-header">Список статей</h1>
+    {% if articles %}
+        <ul class="articles-list">
+            {% for article in articles %}
+                <li class="article-item">
+                    <a href="{% url 'articles:article_detail' article.pk %}" class="article-title">{{ article.title }}</a>
+                    <p class="article-author">Автор: {{ article.author.username }}</p>
+                    <p class="article-date">Создано: {{ article.created_at|date:"d.m.Y H:i" }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Статьи не найдены.</p>
+    {% endif %}
+</div>
+{% if request.user.is_authenticated %}
+    <div class="add-article-container">
+        <a href="{% url 'articles:create_article' %}" class="add-article-button">Добавить статью</a>
+    </div>
+{% endif %}
+    {% endblock %}

@@ -1,0 +1,201 @@
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #FFFFFF; 
+    }
+
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1920px;
+    height: 2000px;
+    margin: 0 auto; 
+    background-color: #e1e1e1; 
+    color: white;
+}
+
+#first-name, #last-name {
+    width: 48%;
+    color: #1e1e1e
+}
+#password, #confirm-password {
+    width: 48%; 
+}
+#email, #username {
+    width: 48%; 
+}
+.frame-child {
+    position: relative; 
+    width: 100%;
+    height: 122px;
+    background-color: #1e1e1e;
+}
+
+.frame-item {
+    position: absolute;
+    top: 27px;
+    left: 37px;
+    width: 68px;
+    height: 68px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+}
+
+.rocket-science {
+    position: absolute;
+    top: 44px;
+    left: 140px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.nav-item {
+    position: absolute;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #d9d9d9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #3CAAB1;
+}
+
+
+.glavnaya {
+    top: 44px;
+    left: 650px; 
+}
+
+.Onas {
+    top: 44px;
+    left: 850px; 
+}
+
+.obsvyas {
+    top: 44px;
+    left: 1050px;
+}
+
+.profile {
+    top: 44px;
+    left: 1250px;
+}
+
+.registration-form {
+    width: 100%; 
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 1600px; 
+    height: 1800px; 
+}
+
+.registration-form h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #1e1e1e
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.form-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+.form-row label,
+.registration-form label {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #1e1e1e
+}
+
+.form-row input,
+.registration-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e1e1e1;
+}
+
+.register-button {
+    background-color: #3CAAB1;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #1a7513;
+}
+
+.footer {
+    width: 100%;
+    background-color: #161515;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 0; 
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-description {
+    font-size: 14px;
+    color: #a9a9a9;
+    margin-top: 10px;
+}
+
+.footer-rights {
+    font-size: 10px;
+    color: #a9a9a9;
+}

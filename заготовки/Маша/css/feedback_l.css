@@ -1,0 +1,337 @@
+
+
+/* Main Section */
+.feedback-icon {
+    position: absolute;
+    top: 161px;
+    left: 90px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    width: 657px;
+    height: 176px;
+}
+.feedback1-txt {
+    position: absolute;
+    top: 212px;
+    left: 146px;
+    font-size: 36px;
+    display: inline-block;
+    color: #2d2d2d;
+    text-align: center;
+    width: 523px;
+    height: 97px;
+}
+.feedback-main-icon {
+    position: absolute;
+    top: 299px;
+    left: 90px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    width: 1772px;
+    height: 1890px;
+}
+
+/* Контейнер1 */
+.msg-theme-container {
+    position: absolute;
+    top: 412px;
+    left: 143px;
+    width: 1666px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("Rectangle fl1.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.msg-theme-input {
+    flex: 1;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #2d2d2d;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+}
+
+/* Стиль текста-заполнителя */
+.msg-theme-input::placeholder {
+    color: #4a4a4a;
+    font-size: 20px;
+}
+
+/* Контейнер2 */
+.msg-title-container {
+    position: absolute;
+    top: 563px;
+    left: 143px;
+    width: 1666px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("Rectangle fl2.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.msg-title-input {
+    flex: 1;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #2d2d2d;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+}
+
+/* Стиль текста-заполнителя */
+.msg-title-input::placeholder {
+    color: #4a4a4a;
+    font-size: 20px;
+}
+
+/* Контейнер3 */
+.msg-container {
+    position: absolute;
+    top: 783px;
+    left: 143px;
+    width: 1666px;
+    height: 993px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 20px;
+    background-image: url("Rectangle fl3.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.msg-input {
+    position: relative;
+    top: 50px;  
+    width: calc(100% - 40px); /* Учёт отступов */
+    height: 890px;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #2d2d2d;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+    resize: none; /* Убираем возможность изменения размера */
+    padding: 10px 40px 10px 40px; /* Отступы внутри поля */
+    line-height: 1.5; /* Интервал между строками */
+}
+
+/* Стиль текста-заполнителя */
+.msg-input::placeholder {
+    color: #4a4a4a;
+    font-size: 20px;
+}
+
+/* Контейнер4 */
+.mail-container {
+    position: absolute;
+    top: 1851px;
+    left: 143px;
+    width: 1666px;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("Rectangle fl4.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0  ;
+}
+
+/* Поле ввода */
+.mail-input {
+    flex: 1;
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #2d2d2d;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    padding-left: 40px;
+}
+
+/* Стиль текста-заполнителя */
+.mail-input::placeholder {
+    color: #4a4a4a;
+    font-size: 20px;
+}
+
+/* Контейнер для кнопок */
+.button-container {
+    display: flex;
+    gap: 20px; /* Расстояние между кнопками */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/* Общий стиль кнопок */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Расстояние между иконкой и текстом */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0; /* Цвет фона кнопки */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Иконки в кнопках */
+button img {
+    width: 24px; /* Размер иконки */
+    height: 24px;
+}
+
+/* Текст в кнопках */
+button span {
+    font-size: 24px;
+    color: #2d2d2d; /* Цвет текста */
+    font-weight: bold;
+}
+
+
+.msg-theme-icon {
+    position: absolute;
+    top: 412px;
+    left: 143px;
+    border-radius: 20px;
+    width: 1666px;
+    height: 111px;
+}
+.msg-theme-txt {
+    z-index: 10;
+    position: absolute;
+    top: 426px;
+    left: 208px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 1548px;
+    height: 92px;
+}
+.msg-icon {
+    position: absolute;
+    top: 783px;
+    left: 143px;
+    border-radius: 20px;
+    width: 1666px;
+    height: 993px;
+}
+.msg-txt {
+    position: absolute;
+    top: 821px;
+    left: 208px;
+    color: #2d2d2d;
+    display: inline-block;
+    width: 1548px;
+    height: 914px;
+}
+.msg-title-icon {
+    position: absolute;
+    top: 563px;
+    left: 143px;
+    border-radius: 20px;
+    width: 1666px;
+    height: 111px;
+}
+
+.mail-txt {
+    position: absolute;
+    top: 1861px;
+    left: 208px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 1186px;
+    height: 96px;
+}
+.mail-icon {
+    position: absolute;
+    top: 1851px;
+    left: 143px;
+    border-radius: 20px;
+    width: 1666px;
+    height: 111px;
+}
+.msg-title-txt {
+    z-index: 10;
+    position: absolute;
+    top: 572px;
+    left: 208px;
+    color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    width: 1548px;
+    height: 93px;
+}
+.send-icon {
+    position: absolute;
+    top: 2013px;
+    left: 143px;
+    border-radius: 20px;
+    width: 458px;
+    height: 110px;
+}
+.clear-icon {
+    position: absolute;
+    top: 2013px;
+    left: 649px;
+    border-radius: 20px;
+    width: 458px;
+    height: 110px;
+}
+.send-txt {
+    position: absolute;
+    top: 2023px;
+    left: 228px;
+    color: #2d2d2d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 281px;
+    height: 91px;
+}
+.clear-txt {
+    position: absolute;
+    top: 2023px;
+    left: 735px;
+    color: #2d2d2d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 91px;
+}
+

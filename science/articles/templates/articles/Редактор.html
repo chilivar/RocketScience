@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование статьи</title>
+    <link rel="stylesheet" href="../Css/global.css">
+    <link rel="stylesheet" href="../Css/styleredactor.css">
+    <script defer src="../Js/redactor.js"></script>
+    <script src="../Js/globaljs.js"></script>
+</head>
+<body>
+    <!-- Основной фон -->
+    <div class="background"></div>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <button class="logo-button">
+                <div class="logo-circle"></div>
+            </button>
+            <span>Rocket Science</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-item">Главная</a>
+            <a href="about.html" class="nav-item">О нас</a>
+            <a href="feedback.html" class="nav-item">Обратная связь</a>
+            <a href="profile.html" class="nav-item">Профиль</a>
+        </nav>
+        <div class="auth-buttons">
+            <button id="login-button" class="auth-button">Вход</button>
+            <button id="register-button" class="auth-button">Регистрация</button>
+            <button id="logout-button" class="auth-button" style="display: none;">Выход</button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="article-container">
+        <div class="edit-form-container">
+            <h2>Редактирование статьи</h2>
+            <form id="editArticleForm" class="edit-form">
+                <label for="article-title">Заголовок статьи:</label>
+                <input type="text" id="article-title" name="title" placeholder="Введите заголовок статьи" required>
+
+                <label for="article-content">Содержание статьи:</label>
+                <textarea id="article-content" name="content" rows="10" placeholder="Введите текст статьи" required></textarea>
+
+                <button type="submit" class="publish-button">Сохранить</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <div class="logo-circle"></div>
+                <p class="footer-title">Rocket Science</p>
+            </div>
+        </div>
+        <div class="footer-center">
+            <p class="footer-contacts">Контакты: +7 779 523 18 44<br>+7 779 523 18 43</p>
+            <p class="footer-email">Почта: support@gmail.com<br>support1@gmail.com</p>
+        </div>
+        <div class="footer-right">© 2024 RocketScience.com</div>
+    </footer>
+</body>
+</html>

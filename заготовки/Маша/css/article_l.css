@@ -1,0 +1,118 @@
+
+/* Footer Section */
+.footer-icon {
+    position: absolute;
+    top: 2255px;
+    left: -1px;
+    width: 1924px;
+    height: 245px;
+}
+.rocketsciencecom {
+    position: absolute;
+    top: 2425px;
+    left: 1584px;
+    color: #999;
+    display: inline-block;
+    width: 339px;
+    height: 29px;
+}
+.gmail-txt {
+    margin: 0;
+}
+.gmail1-txt {
+    margin: 0;
+    white-space: pre-wrap;
+}
+.supportgmail{
+    position: absolute;
+    top: 2398px;
+    left: 1002px;
+    color: #999;
+    display: inline-block;
+    width: 365px;
+    height: 84px;
+}
+.contacts {
+    position: absolute;
+    top: 2398px;
+    left: 583px;
+    color: #999;
+    display: inline-block;
+    width: 365px;
+    height: 84px;
+}
+.logo-icon {
+    position: absolute;
+    top: 2304px;
+    left: 39px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    width: 68px;
+    height: 68px;
+}
+.rocket-science1-txt {
+    position: absolute;
+    top: 2316px;
+    left: 142px;
+    font-size: 32px;
+    display: inline-block;
+    width: 254px;
+    height: 44px;
+}
+.group-icon {
+    position: absolute;
+    height: 2.63%;
+    width: 3.46%;
+    top: 92.24%;
+    right: 22.75%;
+    bottom: 5.13%;
+    left: 73.79%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.vector-icon {
+    position: absolute;
+    height: 2.64%;
+    width: 4.05%;
+    top: 92.24%;
+    right: 16.46%;
+    bottom: 5.12%;
+    left: 79.49%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.vector-icon1 {
+    position: absolute;
+    height: 2.52%;
+    width: 3.18%;
+    top: 92.36%;
+    right: 11.03%;
+    bottom: 5.12%;
+    left: 85.79%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.vector-icon2 {
+    position: absolute;
+    height: 2.4%;
+    width: 4.36%;
+    top: 92.48%;
+    right: 3.74%;
+    bottom: 5.12%;
+    left: 91.9%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.description-txt {
+    position: absolute;
+    top: 2400px;
+    left: 39px;
+    color: #999;
+    display: inline-block;
+    width: 365px;
+    height: 84px;
+}

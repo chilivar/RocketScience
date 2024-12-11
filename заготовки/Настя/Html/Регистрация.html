@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="../Css/stylesreg.css"> 
+        <link rel="stylesheet" href="../Css/mobiversiyareg.css" media="screen and (max-width: 768px)">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
+        <title>Регистрация</title>
+    </head>
+<body>
+    <!-- Основной фон -->
+    <div class="background"></div>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <button class="logo-button">
+                <div class="logo-circle"></div>
+            </button>
+            <span>Rocket Science</span>
+        </div>
+        <nav class="nav">
+            <a href="#" class="nav-item">Главная</a>
+            <a href="#" class="nav-item">О нас</a>
+            <a href="#" class="nav-item">Обратная связь</a>
+            <a href="#" class="nav-item">Профиль</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="auth-button">Вход</button>
+            <button class="auth-button">Регистрация</button>
+        </div>
+    </header>
+
+    <div class="registration-container">
+        <div class="registration-form">
+            <h2>Регистрация</h2>
+            <form action="/submit_registration" method="post">
+                <div class="form-row">
+                    <label for="first-name">Имя</label>
+                    <input type="text" id="first-name" name="first_name" required>
+                    <label for="last-name">Фамилия</label>
+                    <input type="text" id="last-name" name="last_name" required>
+                </div>
+                <label for="email">Почта</label>
+                <input type="email" id="email" name="email" required>
+                <label for="username">Псевдоним</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password">Повторите пароль</label>
+                <input type="password" id="confirm-password" name="confirm_password" required>
+                <button type="submit" class="register-button">Регистрация</button>
+            </form>
+        </div>
+    </div>
+
+         <!-- Модальное окно для логотипа -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="modalVideo" controls>
+                <source src="../Css/Пробник.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+
+    <!-- Модальное окно для случайного видео -->
+    <div id="randomVideoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="randomModalVideo" controls>
+                <source src="../Css/Пробник.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <div class="logo-circle"></div>
+                <p class="footer-title">Rocket Science</p>
+            </div>
+        </div>
+        <div class="footer-center">
+            <p class="footer-contacts">Контакты: +7 779 523 18 44<br>+7 779 523 18 43</p>
+            <p class="footer-email">Почта: support@gmail.com<br>support1@gmail.com</p>
+        </div>
+        <div class="footer-right">© 2024 RocketScience.com</div>
+    </footer>
+
+    <script>
+        // Логика для логотипа
+        const logoButton = document.querySelector('.logo-button');
+        const videoModal = document.getElementById('videoModal');
+        const closeModalLogo = videoModal.querySelector('.close-modal');
+        const modalVideo = document.getElementById('modalVideo');
+
+        // Логика для случайного видео
+        const allButtons = document.querySelectorAll('button');
+        const randomVideoModal = document.getElementById('randomVideoModal');
+        const closeModalRandom = randomVideoModal.querySelector('.close-modal');
+        const randomModalVideo = document.getElementById('randomModalVideo');
+
+        // Открытие видео для логотипа
+        logoButton.addEventListener('click', () => {
+            videoModal.style.display = 'flex';
+            modalVideo.play();
+        });
+
+        // Закрытие видео для логотипа
+        closeModalLogo.addEventListener('click', () => {
+            videoModal.style.display = 'none';
+            modalVideo.pause();
+            modalVideo.currentTime = 0;
+        });
+
+        // Логика случайного видео для остальных кнопок
+        allButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const randomChance = Math.floor(Math.random() * 5) + 1; // 20% вероятность
+                if (randomChance === 1) {
+                    randomVideoModal.style.display = 'flex';
+                    randomModalVideo.play();
+                }
+            });
+        });
+
+        // Закрытие случайного видео
+        closeModalRandom.addEventListener('click', () => {
+            randomVideoModal.style.display = 'none';
+            randomModalVideo.pause();
+            randomModalVideo.currentTime = 0;
+        });
+
+        // Закрытие при клике вне видео
+        [videoModal, randomVideoModal].forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    const video = modal.querySelector('video');
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

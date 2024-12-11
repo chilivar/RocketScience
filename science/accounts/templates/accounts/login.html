@@ -1,0 +1,29 @@
+{% extends 'accounts/Shablon.html' %}
+{% load static %}
+{% block css %}    <link rel="stylesheet" href="{% static 'accounts/css/style2.css' %}">
+{% endblock %}
+
+    {% block content %}
+    <main class="main-content">
+        <div class="frame-inner">
+            <h1 class="BigLogin">Вход</h1>
+            <div class="icons">
+                <img class="icon" alt="GitHub" src="{% static 'accounts/img/logo-github.svg' %}">
+                <img class="icon" alt="Chrome" src="{% static 'accounts/img/logo-chrome.svg' %}">
+                <img class="icon" alt="Google" src="{% static 'accounts/img/logo-google.svg' %}">
+            </div>
+            <form action="login" method="post">
+                 {% csrf_token %}
+                <label class="label" for="username">Номер телефона или почта</label>
+                <input type="text" id="username" class="input" name="username" placeholder="Введите номер телефона или почту" required>
+
+                <label class="label" for="password">Пароль</label>
+                <input type="password" id="password" class="input" name="password" placeholder="Введите пароль" required>
+
+                <a href="#" class="forgotpassword">Забыли пароль?</a>
+                <button type="submit" class="button">Вход</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}
+

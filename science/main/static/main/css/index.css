@@ -1,0 +1,115 @@
+
+/* Main Section */
+.content {
+    flex: 1; /* Контент занимает всё доступное пространство */
+    padding: 20px;
+}
+
+/* Контейнер поиска */
+.search-container {
+    position: relative;
+    max-width: 100%; /* Позволяет контейнеру растягиваться по ширине */
+    width: 90%; /* Устанавливаем ширину контейнера на 100% */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("../img/Rectangle sd1.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 20px;
+    box-sizing: border-box; /* Чтобы padding не вылезал за пределы */
+    top: 90px;
+    margin: 110px;
+}
+
+/* Поле ввода */
+.search-input {
+    flex: 1; /* Поле ввода растягивается по ширине */
+    height: 80%;
+    border: none;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+}
+
+/* Стиль текста-заполнителя */
+.search-input::placeholder {
+    color: #b5b5b5;
+    font-size: 16px;
+}
+
+/* Лупа */
+.icon-magnifying-glass {
+    position: absolute;
+    top: 15px;
+    right: 35px; /* Немного уменьшаем отступ, чтобы лупа не выходила за пределы */
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.vector-icon4 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+
+/* Адаптивность: Медиазапросы для разных экранов */
+
+@media (max-width: 768px) {
+    /* Для экранов меньшего размера (например, телефоны) */
+    .search-container {
+        padding: 0 10px;
+        height: 80px;
+        margin-top: 20px; /* Отступ сверху для мобильных устройств */
+        margin-left: 10px; /* Меньше отступы по бокам */
+        margin-right: 10px;
+    }
+
+    .search-input {
+        font-size: 18px; /* Уменьшаем размер шрифта на мобильных устройствах */
+    }
+
+    .icon-magnifying-glass {
+        top: 15px; /* Меняем положение иконки */
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Для очень маленьких экранов (например, смартфоны) */
+    .search-container {
+        padding: 0 5px;
+        height: 60px;
+        margin-top: 10px; /* Меньше отступ сверху */
+        margin-left: 5px; /* Меньше отступы по бокам */
+        margin-right: 5px;
+    }
+
+    .search-input {
+        font-size: 16px; /* Ещё больше уменьшаем шрифт */
+    }
+
+    .icon-magnifying-glass {
+        top: 10px;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+}
+

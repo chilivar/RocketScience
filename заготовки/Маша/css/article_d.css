@@ -1,0 +1,39 @@
+
+/* Main Section */
+.article-icon {
+    
+    margin-top: 184px;
+    margin-left: 155px;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    width: 80%;
+    height: 1520px;
+}
+.article-txt {
+    position: absolute;
+    top: 276px;
+    left: 273px;
+    font-size: 20px;
+    display: inline-block;
+    width: 1588px;
+    height: 1332px;
+}
+.comments-icon {
+    
+    margin-top: 50px;
+    margin-left: 155px;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    width: 80%;
+    height: 430px;
+}
+.comments-txt {
+    position: absolute;
+    top: 1808px;
+    left: 240px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    width: 1214px;
+    height: 60px;
+}

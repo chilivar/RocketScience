@@ -1,0 +1,128 @@
+
+/* Main Section */
+.main-page-icon {
+    position: absolute;
+    top: 179px;
+    left: 63px;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    width: 1814px;
+    height: 2033px;
+}
+.zero1 {
+    position: absolute;
+    top: 980px;
+    left: 598px;
+    display: flex;
+    align-items: center;
+    width: 58px;
+    height: 97px;
+}
+.zero2 {
+    position: absolute;
+    top: 883px;
+    left: 598px;
+    display: flex;
+    align-items: center;
+    width: 58px;
+    height: 97px;
+}
+.zero3 {
+    position: absolute;
+    top: 787px;
+    left: 598px;
+    display: flex;
+    align-items: center;
+    width: 58px;
+    height: 97px;
+}
+.line3 {
+    position: absolute;
+    top: 1075.5px;
+    left: 146.5px;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    width: 510px;
+    height: 1px;
+}
+.line2 {
+    position: absolute;
+    top: 979.5px;
+    left: 146.5px;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    width: 510px;
+    height: 1px;
+}
+.p-comments-txt {
+    position: absolute;
+    top: 980px;
+    left: 147px;
+    display: flex;
+    align-items: center;
+    width: 254px;
+    height: 96px;
+}
+.reviews-txt {
+    position: absolute;
+    top: 883px;
+    left: 147px;
+    display: flex;
+    align-items: center;
+    width: 254px;
+    height: 97px;
+}
+.articles-txt {
+    position: absolute;
+    top: 787px;
+    left: 147px;
+    display: flex;
+    align-items: center;
+    width: 254px;
+    height: 96px;
+}
+.photo {
+    position: absolute;
+    top: 256px;
+    left: 199px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    border: 5px solid #b5b5b5;
+    box-sizing: border-box;
+    width: 295px;
+    height: 295px;
+}
+.p {
+    margin: 0;
+}
+.profite-info {
+    position: absolute;
+    top: 256px;
+    left: 748px;
+    font-size: 32px;
+    display: inline-block;
+    width: 1055px;
+    height: 1918px;
+}
+.username {
+    position: absolute;
+    top: 587px;
+    left: 147px;
+    font-size: 32px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 399px;
+    height: 76px;
+}
+.line1 {
+    position: absolute;
+    top: 882.5px;
+    left: 146.5px;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    width: 510px;
+    height: 1px;
+}
+

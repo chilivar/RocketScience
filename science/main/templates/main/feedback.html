@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'main/css/feedback.css' %}" />{% endblock %}
+
+
+{% block content %}
+<!-- Основной контент -->
+    <main class="feedback-container">
+        <div class="feedback-form">
+            <h2 class="form-title">Обратная связь</h2>
+            <input type="text" class="form-input" placeholder="Заголовок сообщения" />
+            <input type="text" class="form-input" placeholder="Тема сообщения" />
+            <textarea class="form-textarea" placeholder="Сообщение"></textarea>
+            <div class="form-buttons">
+                <button class="form-button send-button">Отправить</button>
+                <button class="form-button clear-button">Очистить</button>
+            </div>
+        </div>
+    </main>
+{% endblock %}

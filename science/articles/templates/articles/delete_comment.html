@@ -1,0 +1,25 @@
+{% extends 'accounts/Shablon.html' %}
+{% load static %}
+{% block css %}
+<title>Редактирование статьи</title>
+<link rel="stylesheet" href="{% static 'articles/css/delete_comments.css' %}">
+{% endblock %}
+{% block content %}
+<div class="delete-container">
+    <h1 class="delete-header">Удаление комментария</h1>
+    <p class="delete-text">Вы уверены, что хотите удалить комментарий:</p>
+    <blockquote class="comment-content">{{ comment.content }}</blockquote>
+    <p class="comment-author">Автор: {{ comment.author.username }}</p>
+    <form method="post" class="delete-form">
+        {% csrf_token %}
+        <button type="submit" class="delete-button">Да, удалить</button>
+        <a href="{% url 'articles:article_detail' comment.article.pk %}" class="cancel-button">Отмена</a>
+    </form>
+</div>
+{% endblock %}
+
+
+
+
+
+

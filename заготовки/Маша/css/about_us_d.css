@@ -1,0 +1,43 @@
+
+
+/* Main Section */
+.about-icon {
+    position: absolute;
+    top: 161px;
+    left: 220px;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    width: 500px;
+    height: 120px;
+}
+.about-txt {
+    z-index: 10;
+    position: absolute;
+    top: 200px;
+    left: 230px;
+    font-size: 30px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    width: 500px;
+    height: 97px;
+}
+.info-icon {
+    
+    margin-top: 235px;
+    margin-left: 200px;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    width: 80%;
+    height: 600px;
+}
+.info-txt {
+    position: absolute;
+    top: 340px;
+    left: 300px;
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    width: 1580px;
+    height: 600px;
+}

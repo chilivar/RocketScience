@@ -21,6 +21,7 @@
             {% for article in articles %}
                 <li class="article-item">
                     <a href="{% url 'articles:article_detail' article.pk %}" class="article-title">{{ article.title }}</a>
+                    <p class="article-author">Автор: {{ article.author.username }}</p>
                     <p class="article-date">Создано: {{ article.created_at|date:"d.m.Y H:i" }}</p>
                 </li>
             {% endfor %}

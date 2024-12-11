@@ -172,3 +172,8 @@ button:hover, a:hover {
 .report-button:hover {
     background-color: #c82333;
 }
+.article-author {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}

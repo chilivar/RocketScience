@@ -7,6 +7,7 @@
 {% block content %}
 <div class="article-detail">
     <h1>{{ article.title }}</h1>
+    <p class="article-author"><strong>Автор:</strong> {{ article.author.username }}</p>
     <p>{{ article.content }}</p>
     <p><strong>Создано:</strong> {{ article.created_at }}</p>
     <p><strong>Обновлено:</strong> {{ article.updated_at }}</p>

@@ -10,7 +10,7 @@
     position: relative;
     max-width: 100%; /* Позволяет контейнеру растягиваться по ширине */
     width: 90%; /* Устанавливаем ширину контейнера на 100% */
-    height: 90px;
+    height: 60px;
     display: flex;
     align-items: center;
     border-radius: 20px;
@@ -20,7 +20,7 @@
     background-repeat: no-repeat;
     padding: 0 20px;
     box-sizing: border-box; /* Чтобы padding не вылезал за пределы */
-    top: 100px;
+    top: 90px;
     margin: 110px; 
 }
 
@@ -40,16 +40,16 @@
 /* Стиль текста-заполнителя */
 .search-input::placeholder {
     color: #b5b5b5;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /* Лупа */
 .icon-magnifying-glass {
     position: absolute;
-    top: 25px;
-    right: 45px; /* Немного уменьшаем отступ, чтобы лупа не выходила за пределы */
-    width: 45px;
-    height: 45px;
+    top: 15px;
+    right: 35px; /* Немного уменьшаем отступ, чтобы лупа не выходила за пределы */
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     z-index: 3;
 }

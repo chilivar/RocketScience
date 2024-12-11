@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Публикация статьи</title>
+    <link rel="stylesheet" href="../Css/global.css">
+    <script src="../Js/globaljs.js"></script>
+    <link rel="stylesheet" href="../Css/stylearticles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
+</head>
+<body>
+
+    <script src="../Js/js.js"></script>
+    <!-- Основной фон -->
+    <div class="background"></div>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">
+            <button class="logo-button">
+                <div class="logo-circle"></div>
+            </button>
+            <span>Rocket Science</span>
+        </div>
+        <nav class="nav">
+            <a href="#" class="nav-item">Главная</a>
+            <a href="#" class="nav-item">О нас</a>
+            <a href="#" class="nav-item">Обратная связь</a>
+            <a href="#" class="nav-item">Профиль</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="auth-button">Вход</button>
+            <button class="auth-button">Регистрация</button>
+            <button class="auth-button" id="memesButton">Мемы</button>
+            <button class="auth-button" id="logout-button" style="display: none;">Выход</button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="article-container">
+        <h2>Публикация статьи</h2>
+        <form id="articleForm">
+            <label for="article-title">Заголовок статьи</label>
+            <input type="text" id="article-title" name="title" placeholder="Введите заголовок статьи" required>
+
+            <label for="article-content">Текст статьи</label>
+            <textarea id="article-content" name="content" rows="10" placeholder="Введите текст статьи" required></textarea>
+
+            <button type="submit" class="publish-button">Опубликовать</button>
+        </form>
+
+        <!-- Предпросмотр статьи -->
+        <div id="articlePreview" class="article-preview">
+            <h2>Предпросмотр статьи</h2>
+            <h3 id="preview-title"></h3>
+            <p id="preview-content"></p>
+        </div>
+    </div>
+    <div id="memesModal" class="memes-modal">
+        <div class="memes-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="memes-container">
+                <img src="../Css/кот1.jpg" alt="Мем 1" class="meme-image">
+                <img src="../Css/кот2.jpg" alt="Мем 2" class="meme-image">
+                <img src="../Css/кот3.jpg" alt="Мем 3" class="meme-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для логотипа -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="modalVideo" controls>
+                <source src="../Css/Пробник.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+
+    <!-- Модальное окно для случайного видео -->
+    <div id="randomVideoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="randomModalVideo" controls>
+                <source src="../Css/Пробник.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <div class="logo-circle"></div>
+                <p class="footer-title">Rocket Science</p>
+            </div>
+        </div>
+        <div class="footer-center">
+            <p class="footer-contacts">Контакты: +7 779 523 18 44<br>+7 779 523 18 43</p>
+            <p class="footer-email">Почта: support@gmail.com<br>support1@gmail.com</p>
+        </div>
+        <div class="footer-right">© 2024 RocketScience.com</div>
+    </footer>
+
+</body>
+</html>
+
+

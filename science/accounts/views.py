@@ -2,7 +2,13 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
+from django.shortcuts import redirect
+from django.contrib.auth import logout
 
+
+def logout_user(request):
+    logout(request)  # Выход пользователя
+    return redirect('login')
 
 
 def login(request):
@@ -48,7 +54,6 @@ def register(request):
             return redirect('register')
     else:
         return render(request,'accounts/register.html')
-    
 
 
 @login_required

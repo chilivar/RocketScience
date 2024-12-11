@@ -7,6 +7,7 @@
     <title>Rocket Science - Вход</title>
     {% block css %}{% endblock %}
     <link rel="stylesheet"  href="{% static 'accounts/css/global.css' %} " />
+    <script src="{% static 'accounts/Js/globaljs.js' %} "></script>
     <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 </head>
@@ -29,14 +30,30 @@
             <a href="{% url 'profile' %}" class="nav-item">Профиль</a>
         </nav>
         <div class="auth-buttons">
-            <a href="{% url 'login' %}"><button class="auth-button">Вход</button></a>
-            <a href="{% url 'register' %}"><button class="auth-button">Регистрация</button></a>
+            <button class="auth-button" id="memesButton">Коты</button>
+                {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="auth-button">Выход</a>
+    {% else %}
+        <a href="{% url 'login' %}" class="auth-button">Вход</a>
+        <a href="{% url 'register' %}" class="auth-button">Регистрация</a>
+    {% endif %}
+             
         </div>
     </header>
 
     <!-- Main Content Section -->
     {% block content %}
     {% endblock %}
+
+
+        <div  id="memesModal" class="memes-modal">
+        <div class="memes-modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="" alt="Случайный мем" class="meme-display">
+
+            </div>
+        </div>
+    </div>
 
     <!-- Модальное окно для логотипа -->
     <div id="videoModal" class="video-modal">
@@ -75,61 +92,26 @@
         <div class="footer-right">© 2024 RocketScience.com</div>
     </footer>
 
-    <script>
-        // Логика для логотипа
-        const logoButton = document.querySelector('.logo-button');
-        const videoModal = document.getElementById('videoModal');
-        const closeModalLogo = videoModal.querySelector('.close-modal');
-        const modalVideo = document.getElementById('modalVideo');
+<!-- Передача путей через JSON в скрытый элемент -->
+<script id="memes-data" type="application/json">
+    [
+        "{% static 'accounts/img/кот1.jpg' %}",
+        "{% static 'accounts/img/кот2.jpg' %}",
+        "{% static 'accounts/img/кот3.jpg' %}",
+        "{% static 'accounts/img/кот4.jpg' %}",
+        "{% static 'accounts/img/кот5.jpg' %}",
+        "{% static 'accounts/img/кот6.jpg' %}",
+        "{% static 'accounts/img/кот7.jpg' %}",
+        "{% static 'accounts/img/кот8.jpg' %}",
+        "{% static 'accounts/img/кот9.jpg' %}",
+        "{% static 'accounts/img/кот10.jpg' %}",
+        "{% static 'accounts/img/кот11.jpg' %}",
+        "{% static 'accounts/img/кот12.jpg' %}",
+        "{% static 'accounts/img/кот13.jpg' %}"
+    ]
+</script>
+<script src="{% static 'accounts/js/main.js' %}" defer></script>
 
-        // Логика для случайного видео
-        const allButtons = document.querySelectorAll('button');
-        const randomVideoModal = document.getElementById('randomVideoModal');
-        const closeModalRandom = randomVideoModal.querySelector('.close-modal');
-        const randomModalVideo = document.getElementById('randomModalVideo');
-
-        // Открытие видео для логотипа
-        logoButton.addEventListener('click', () => {
-            videoModal.style.display = 'flex';
-            modalVideo.play();
-        });
-
-        // Закрытие видео для логотипа
-        closeModalLogo.addEventListener('click', () => {
-            videoModal.style.display = 'none';
-            modalVideo.pause();
-            modalVideo.currentTime = 0;
-        });
-
-        // Логика случайного видео для остальных кнопок
-        allButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const randomChance = Math.floor(Math.random() * 5) + 1; // 20% вероятность
-                if (randomChance === 1) {
-                    randomVideoModal.style.display = 'flex';
-                    randomModalVideo.play();
-                }
-            });
-        });
-
-        // Закрытие случайного видео
-        closeModalRandom.addEventListener('click', () => {
-            randomVideoModal.style.display = 'none';
-            randomModalVideo.pause();
-            randomModalVideo.currentTime = 0;
-        });
-
-        // Закрытие при клике вне видео
-        [videoModal, randomVideoModal].forEach(modal => {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                    const video = modal.querySelector('video');
-                    video.pause();
-                    video.currentTime = 0;
-                }
-            });
-        });
-    </script>
+   
 </body>
 </html>

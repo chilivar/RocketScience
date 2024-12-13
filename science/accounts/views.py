@@ -6,6 +6,22 @@ from django.shortcuts import redirect
 from django.contrib.auth import logout
 
 from articles.models import Article
+from django import forms
+from django.contrib.auth.models import User
+
+
+
+
+class EditProfileForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'email', 'username']
+        widgets = {
+            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'username': forms.TextInput(attrs={'class': 'form-control'}),
+        }
 
 
 def logout_user(request):
@@ -63,4 +79,34 @@ def register(request):
 def profile(request):
     user_articles = Article.objects.filter(author=request.user).order_by('-created_at')  # Получаем статьи текущего пользователя
     return render(request, 'accounts/profile.html', {'user_articles': user_articles})
+
+
+@login_required
+def edit_profile(request):
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Профиль успешно обновлен!')
+            return redirect('profile')  # Имя URL для отображения профиля
+    else:
+        form = EditProfileForm(instance=request.user)
     
+    return render(request, 'accounts/edit_profile.html', {'form': form})
+
+
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
+@login_required
+def upload_photo(request):
+    if request.method == "POST" and request.FILES.get('profile_photo'):
+        user = request.user
+        user.profile_photo = request.FILES['profile_photo']
+        user.save()
+        messages.success(request, 'Фото профиля успешно обновлено.')
+    else:
+        messages.error(request, 'Ошибка при загрузке фото.')
+    return redirect('profile')
+

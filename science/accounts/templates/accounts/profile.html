@@ -15,8 +15,19 @@
     </div>
     <div class="profile">
       <div class="profile-photo">
-        <img src="https://via.placeholder.com/150" alt="Фото пользователя">
-      </div>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                {% if user.profile_photo %}
+                    <img src="{{ user.profile_photo.url }}" alt="Фото пользователя" class="profile-photo-img">
+                {% else %}
+                    <img src="https://via.placeholder.com/150" alt="Фото пользователя" class="profile-photo-img">
+                {% endif %}
+                <input type="file" name="profile_photo" id="profile_photo" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Загрузить фото</button>
+        </form>
+    </div>
       <div class="profile-info">
         <h2>{{ user.username }}</h2>
         <p><strong>Имя:</strong> {{ user.first_name }}</p>
@@ -26,7 +37,10 @@
       </div>
     </div>
     <div class="profile-actions">
-      <button class="btn">Редактировать профиль</button>
+      <!-- <button class="btn">Редактировать профиль</button> -->
+      <form action="{% url 'edit_profile' %}" method="get" style="display: inline;">
+        <button type="submit" class="btn btn-warning">Редактировать профиль</button>
+      </form>
       <button class="btn">Выход</button>
     </div>
   </div>

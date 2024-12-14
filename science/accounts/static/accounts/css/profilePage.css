@@ -6,20 +6,20 @@
   
 
   .main-content {
-    display: flex;
+     display: flex;
+    justify-content: flex-start; /* Выровнять элементы по горизонтали */
+    gap: 40px; /* Расстояние между секциями */
     max-width: 1200px;
     margin: 50px auto;
   }
   
   .profile-container {
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 300px;
+     width: 300px;
     padding: 20px;
     background-color: #2c2c2c;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-right: 30px;
+
   }
   
   .profile-photo img {
@@ -62,9 +62,11 @@
   }
   /* Секция постов */
   .post-section {
-    margin-left: 10px;
-    margin-top: 10px;
-    padding: 0px;
+ flex-grow: 1; /* Занимает оставшееся пространство */
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .posts-section2 {
@@ -88,7 +90,7 @@
     width: 50%;
     padding: 10px;
     margin-top: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #404141;
     border-radius: 5px;
     resize: vertical;
   }
@@ -102,7 +104,7 @@
 .my-articles-section {
     margin-top: 30px;
     padding: 20px;
-    background: #f9f9f9;
+    background: #404141;
     border-radius: 8px;
 }
 
@@ -115,7 +117,7 @@
 .article-item {
     margin-bottom: 20px;
     padding: 10px 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #404141;
     border-radius: 4px;
     background: #fff;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -128,7 +130,7 @@
 
 .article-title {
     font-size: 18px;
-    color: #007bff;
+    color: #404141;
     text-decoration: none;
     font-weight: bold;
 }

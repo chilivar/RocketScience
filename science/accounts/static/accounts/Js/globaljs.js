@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (randomVideoModal && closeModalRandom && randomModalVideo) {
         allButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const randomChance = Math.floor(Math.random() * 5) + 1; // 20% вероятность
+                const randomChance = Math.floor(Math.random() * 0) + 0; // 20% вероятность
                 if (randomChance === 1) {
                     randomVideoModal.style.display = 'flex';
                     randomModalVideo.play();

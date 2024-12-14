@@ -1,0 +1,36 @@
+{% extends 'accounts/Shablon.html' %}
+{% load static %}
+{% block css %}    <link rel="stylesheet" href="{% static 'accounts/css/edit_profile.css' %}">          
+{% endblock %}     
+
+{% block content %}
+<main class="main-content">
+    <div class="frame-inner">
+        <h2 class="BigLogin">Редактирование профиля</h2>
+        <form id="editProfileForm" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label class="label" for="first_Name">Имя:</label>
+                <input type="text" id="first_Name" class="profile-input input" name="first_name" placeholder="Введите имя" value="{{ form.first_name.value }}" required>
+            </div>
+            <div class="form-group">
+                <label class="label" for="last_Name">Фамилия:</label>
+                <input type="text" id="last_Name" class="profile-input input" name="last_name" placeholder="Введите фамилию" value="{{ form.last_name.value }}" required>
+            </div>
+            <div class="form-group">
+                <label class="label" for="email">Почта:</label>
+                <input type="email" id="email" class="profile-input input" name="email" placeholder="Введите почту" value="{{ form.email.value }}" required>
+            </div>
+            <div class="form-group">
+                <label class="label" for="username">Псевдоним:</label>
+                <input type="text" id="username" class="profile-input input" name="username" placeholder="Введите псевдоним" value="{{ form.username.value }}" required>
+            </div>
+            <button type="submit" class="button save-button btn btn-primary">Сохранить изменения</button>
+            <button type="button" class="button cancel-button">Отмена</button>
+        </form>
+    </div>
+</main>
+
+
+
+{% endblock %}

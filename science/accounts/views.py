@@ -99,14 +99,4 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-@login_required
-def upload_photo(request):
-    if request.method == "POST" and request.FILES.get('profile_photo'):
-        user = request.user
-        user.profile_photo = request.FILES['profile_photo']
-        user.save()
-        messages.success(request, 'Фото профиля успешно обновлено.')
-    else:
-        messages.error(request, 'Ошибка при загрузке фото.')
-    return redirect('profile')
 
